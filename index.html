@@ -692,6 +692,41 @@
                     
 
                     
+                        
+
+<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<div class="music-player">
+    
+    <div class="title center-align">
+        <i class="fas fa-music"></i>&nbsp;&nbsp;听听音乐
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="aplayer" class="music"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script>
+$(function () {
+    new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: 'false' === 'true',
+        autoplay: 'false' === 'true',
+        theme: '#42b983',
+        loop: 'all',
+        order: 'list',
+        preload: 'auto',
+        volume: Number('0.7'),
+        listFolded: 'false' === 'true',
+        listMaxHeight: '',
+        audio: eval([{"name":"I Do","artist":"陈奕迅","url":"http://203.205.137.157/amobile.music.tc.qq.com/C400001is3xL3VTzT3.m4a?guid=558497304&vkey=DA08003987FF789E81E7E01C629697679C6ABEB25EB1785FBA9D1CA41D7DF14E87D0DC7952A42FDF76CE835C035EA1D5A5539F113BEA648D&uin=7903&fromtag=66","cover":"https://y.gtimg.cn/music/photo_new/T002R300x300M000001KhJot0mfckd.jpg?max_age=2592000"},{"name":"灰色头像","artist":"许嵩","url":"http://isure.stream.qqmusic.qq.com/C4000043aj132xwlEf.m4a?guid=2175396556&vkey=AA7897FFAF4F4A2A366B0015BE683E18CABC8BF979EF171C84E057E0C98D4F2938EA7D3015BB30D00226C97FA3054BCEF1C620A22A0B1227&uin=0&fromtag=66","cover":"/medias/music/cover2.png"},{"name":"温柔","artist":"五月天&孙燕姿","url":"http://203.205.137.210/amobile.music.tc.qq.com/C400000qzndv3RJUjM.m4a?guid=558497304&vkey=2A1AB0EFFA1BA42F75FD2F292CF869540E724E9A21F93334E672E9A77B3A10A9739D6CF187A78FB2E38F88755A1676A9FB4CE1829201AE95&uin=7903&fromtag=66","cover":"http://xxx.com/music-cover3.png"}])
+    });
+});
+</script>
+                    
 
                     
 
