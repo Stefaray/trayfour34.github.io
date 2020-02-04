@@ -432,8 +432,9 @@
 </header>
 
     <link rel="stylesheet" href="/css/gallery.css">
-<link rel="stylesheet" type="text/css" href="">
-<link rel="stylesheet" type="text/css" href="">
+<link type="text/css" href="/libs/fancybox/fancybox.css" rel="stylesheet">
+<link type="text/css" href="/libs/justifiedGallery/justifiedGallery.min.css" rel="stylesheet">
+
 
 
 <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
@@ -449,24 +450,25 @@
 </div>
 
 
+
 <div class="container">
     <div class="photo-wrapper">
-        
-            <div class="waterfall" id="encrypt-blog">
-                <a href="https://raw.githubusercontent.com/trayfour34/blog-photo-space/master/blog_files/img/PicGo-Github-PicBed/2018/IMG_20180204_113055.jpg" target="_blank"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://raw.githubusercontent.com/trayfour34/blog-photo-space/master/blog_files/img/PicGo-Github-PicBed/2018/IMG_20180204_113055.jpg"       alt=2018/IMG_20180204_113055.jpg>    </a><a href="https://raw.githubusercontent.com/trayfour34/blog-photo-space/master/blog_files/img/PicGo-Github-PicBed/2018/IMG_20180204_113302.jpg" target="_blank"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://raw.githubusercontent.com/trayfour34/blog-photo-space/master/blog_files/img/PicGo-Github-PicBed/2018/IMG_20180204_113302.jpg"       alt=2018/IMG_20180204_113302.jpg>    </a><a href="https://raw.githubusercontent.com/trayfour34/blog-photo-space/master/blog_files/img/PicGo-Github-PicBed/2018/IMG_20180204_113442.jpg" target="_blank"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://raw.githubusercontent.com/trayfour34/blog-photo-space/master/blog_files/img/PicGo-Github-PicBed/2018/IMG_20180204_113442.jpg"       alt=2018/IMG_20180204_113442.jpg>    </a><a href="https://raw.githubusercontent.com/trayfour34/blog-photo-space/master/blog_files/img/PicGo-Github-PicBed/2018/IMG_20180208_083336.jpg" target="_blank"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://raw.githubusercontent.com/trayfour34/blog-photo-space/master/blog_files/img/PicGo-Github-PicBed/2018/IMG_20180208_083336.jpg"       alt=2018/IMG_20180208_083336.jpg>    </a>
-            </div>
-        
+        <div class="waterfall" id="mygallery">
+            <a href="https://raw.githubusercontent.com/trayfour34/blog-photo-space/master/blog_files/img/PicGo-Github-PicBed/2018/IMG_20180204_113055.jpg" target="_blank"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://raw.githubusercontent.com/trayfour34/blog-photo-space/master/blog_files/img/PicGo-Github-PicBed/2018/IMG_20180204_113055.jpg"       alt=2018/IMG_20180204_113055.jpg>    </a><a href="https://raw.githubusercontent.com/trayfour34/blog-photo-space/master/blog_files/img/PicGo-Github-PicBed/2018/IMG_20180204_113302.jpg" target="_blank"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://raw.githubusercontent.com/trayfour34/blog-photo-space/master/blog_files/img/PicGo-Github-PicBed/2018/IMG_20180204_113302.jpg"       alt=2018/IMG_20180204_113302.jpg>    </a><a href="https://raw.githubusercontent.com/trayfour34/blog-photo-space/master/blog_files/img/PicGo-Github-PicBed/2018/IMG_20180204_113442.jpg" target="_blank"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://raw.githubusercontent.com/trayfour34/blog-photo-space/master/blog_files/img/PicGo-Github-PicBed/2018/IMG_20180204_113442.jpg"       alt=2018/IMG_20180204_113442.jpg>    </a><a href="https://raw.githubusercontent.com/trayfour34/blog-photo-space/master/blog_files/img/PicGo-Github-PicBed/2018/IMG_20180208_083336.jpg" target="_blank"     class="photo-item" rel="example_group noopener"     data-fancybox="images">      <img src="https://raw.githubusercontent.com/trayfour34/blog-photo-space/master/blog_files/img/PicGo-Github-PicBed/2018/IMG_20180208_083336.jpg"       alt=2018/IMG_20180208_083336.jpg>    </a>
+
+        </div>
     </div>
 </div>
-<script src=""></script>
-<script src=""></script>
-<script src=""></script>
-<script>
-  // $(".waterfall").lazyload();
-  $("a[rel=example_group]").fancybox();
-  $("#encrypt-blog").justifiedGallery({margins: 5, rowHeight: 150});
-</script>
 
+
+<script src="/libs/fancybox/fancybox.js"></script>
+<script src="/libs/justifiedGallery/justifiedGallery.min.js"></script>
+<script>
+
+  $("a[rel=example_group]").fancybox();
+  $("#mygallery").justifiedGallery({margins: 5, rowHeight: 150});
+
+</script>
 
     <footer class="page-footer bg-color">
     <div class="container row center-align" style="margin-bottom: 15px !important;">
