@@ -33,11 +33,27 @@
     }
 }
 
+
 body {
-    background-color: url("/medias/background.png");
-    margin: 0;
-    color: #34495e;
+    background-image: url("/medias/background.png");
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center;
+    background-size: cover;
+    margin:0 auto;
+/* 注释掉的属性 */
+    @-webkit-keyframes rainbow
 }
+
+.tmptmp{
+    background-image: url("/medias/123.jpg");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size: cover;
+    margin:0 auto;
+
+}
+
 
 h1 {
     margin: 48px 0 22px -5px;
@@ -237,6 +253,7 @@ mark {
 .card {
     border-radius: 10px;
     box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+    
 }
 
 .card .card-image img {

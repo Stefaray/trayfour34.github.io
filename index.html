@@ -73,7 +73,7 @@
     <ul class="sub-nav menus_item_child ">
       
       <li>
-        <a href="/musics">
+        <a href="/music">
           
           <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
           
@@ -134,7 +134,7 @@
       </li>
       
       <li>
-        <a href="/videos">
+        <a href="/video">
           
           <i class="fas fa-video" style="margin-top: -20px; zoom: 0.6;"></i>
           
@@ -143,7 +143,7 @@
       </li>
       
       <li>
-        <a href="/musics">
+        <a href="/music">
           
           <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
           
@@ -311,7 +311,7 @@
               
                 <li>   
 				
-                  <a href="/musics " style="margin-left:50px";>
+                  <a href="/music " style="margin-left:50px";>
 				  
 				   <i class="fa fas fa-music" style="position: absolute;left:28px" ></i>
 			      
@@ -376,7 +376,7 @@
               
                 <li>   
 				
-                  <a href="/videos " style="margin-left:50px";>
+                  <a href="/video " style="margin-left:50px";>
 				  
 				   <i class="fa fas fa-video" style="position: absolute;left:28px" ></i>
 			      
@@ -386,7 +386,7 @@
               
                 <li>   
 				
-                  <a href="/musics " style="margin-left:50px";>
+                  <a href="/music " style="margin-left:50px";>
 				  
 				   <i class="fa fas fa-music" style="position: absolute;left:28px" ></i>
 			      
@@ -699,8 +699,8 @@
 
     
     <div id="indexCard" class="index-card">
-        <div class="container ">
-            <div class="card">
+        <div class="container">
+            <div class="card tmptmp">
                 <div class="card-content">
                     
 
@@ -741,7 +741,42 @@ $(function () {
 </script>
                     
 
-                    
+                    <!-- 
+                        <link rel="stylesheet" href="/libs/dplayer/DPlayer.min.css">
+<div class="video-player">
+    
+    <div class="title center-align">
+        <i class="fas fa-video-camera"></i>&nbsp;&nbsp;精彩视频
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="dplayer" class="dplayer-video"
+                    ></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/dplayer/DPlayer.min.js"></script>
+<script>
+    $(function () {
+        new DPlayer({
+            container: document.getElementById('dplayer'),
+            autoplay: 'false' === 'true',
+            theme: '#42b983',
+            loop: 'false' === 'true',
+            lang: 'zh-CN' === 'zh-CN' ? 'zh-cn' : 'en',
+            preload: 'auto',
+            volume: Number('0.7'),
+            video: {
+                url: '/medias/ray.mp4',
+                pic: '',
+                thumbnails: ''
+            }
+        });
+    });
+</script>
+                     -->
 
                     
                     <div id="recommend-sections" class="recommend">
