@@ -3095,7 +3095,7 @@
 .editormd-logo-7x,
 .editormd-logo-8x {
   font-family: 'editormd-logo';
-  speak: none;
+  /* speak: none; */
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -4361,19 +4361,7 @@ hr.editormd-page-break {
 }
 
 @media screen {
-  .editormd-preview-theme-dark {
-    /* string content */
-    /* a keyword */
-    /* a comment */
-    /* a type name */
-    /* a literal value */
-    /* punctuation, lisp open bracket, lisp close bracket */
-    /* a markup tag name */
-    /* a markup attribute name */
-    /* a markup attribute value */
-    /* a declaration; a variable name */
-    /* a function name */
-  }
+  
   .editormd-preview-theme-dark .str {
     color: #080;
   }

@@ -26,9 +26,9 @@
     
     <script src="/libs/jquery/jquery.min.js"></script>
     
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><link rel="alternate" href="/atom.xml" title="" type="application/atom+xml">
+</head>
 <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 
 
@@ -519,18 +519,17 @@
 
 </header>
 
-    
-<link rel="stylesheet" href="/libs/editorMd/css/editormd.css">
+    <link rel="stylesheet" href="/libs/editorMd/css/editormd.css">
 
 <style type="text/css">
     /* don't remove. */
     .page-cover {
         /* height: 75vh; */
-        height: 940px;
+        height: 960px;
     }
 
     .editormd {
-      top: 76px;
+      top: 22px;
     }
 
     pre {
@@ -538,7 +537,7 @@
     }
 
     .editormd-menu > li.divider {
-      overflow: inherit; 
+      overflow: inherit;
       padding: 5px 0px;
     }
 
@@ -546,7 +545,7 @@
         background-image: linear-gradient(to right, #0EBAB8 0%, #0B6AA0 100%);
     }
 
-    .editormd-form input[type="text"], 
+    .editormd-form input[type="text"],
     .editormd-form input[type="number"] {
         height: 15px;
         margin: 0px;
@@ -571,6 +570,10 @@
       height: 25px;
   }
 
+    .navbar-fixed nav {
+      position: static;
+  }
+
 </style>
 
 <div class="pd-header page-cover">
@@ -580,12 +583,12 @@
 </div>
 
 <script src="/libs/jquery/jquery.min.js"></script>
-<script src="/libs/editorMd/editormd.min.js"></script>
+<script src="/libs/editorMd/editormd.amd.min.js"></script>
 <script  type="text/javascript">
   var myEditor;
-  $(function() {  
+  $(function() { 
       myEditor = editormd("my-editormd", {
-        width   : "90%",
+        width   : "98%",
         height  : 840,
         syncScrolling : "single",
         path    : "/libs/editorMd/lib/",
@@ -594,6 +597,7 @@
       //  editorTheme: "pastel-on-dark",
         markdown: '',
         codeFold: true,
+        searchReplace : true,
         emoji: true,
         taskList: true,
         tocm: true,         // Using [TOCM]
@@ -604,6 +608,7 @@
     });
   });
 </script>
+
 
     <footer class="page-footer bg-color">
     <div class="container row center-align" style="margin-bottom: 15px !important;">
