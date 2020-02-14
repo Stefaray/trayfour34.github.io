@@ -298,10 +298,13 @@ header .side-nav {
     width: 240px;
     z-index: 999;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 7px 10px 0 rgba(0, 0, 0, 0.12);
+    
 }
 
 nav {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 7px 10px 0 rgba(0, 0, 0, 0.12);
+    font-family: "华文新魏","KaiTi","宋体";
+
 }
 
 header .nav-transparent {
@@ -561,6 +564,7 @@ header .go-back i {
     background-position: center center;
     background-size: cover;
     transform: translate3d(0px, 0px, 0px);
+    font-family: "zihun67hao-gouyuxingshu","KaiTi","宋体";
 }
 
 .index-cover {
@@ -886,6 +890,7 @@ header .go-back i {
 #articles {
     margin-top: 10px;
     margin-bottom: 10px;
+
 }
 
 article a {
@@ -908,11 +913,13 @@ article a:hover {
 article .card {
     border-radius: 8px;
     overflow: hidden;
+    
 }
 
 article .card-image {
     background-color: #222;
     border-radius: 8px;
+    font-family: "华文新魏","KaiTi","宋体";
 }
 
 article .card-image img {
@@ -1835,6 +1842,7 @@ thead {
 /*尾部样式*/
 footer {
     padding-bottom: 1px;
+    font-family: "华文新魏","KaiTi","宋体";
 }
 
 footer .social-statis {
