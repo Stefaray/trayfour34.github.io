@@ -150,10 +150,15 @@ pre {
     box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
 }
 
+@font-face{
+    font-family: 'Comic Neue Angular';
+    src: url('../font/ComicNeue-Angular-Regular.ttf');
+}
+
 code {
     padding: 1px 5px;
     top: 13px !important;
-    font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
+    font-family:  Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
     /* font-size: 0.91rem; */
     color: #e96900;
     background-color: #f8f8f8;
@@ -564,7 +569,7 @@ header .go-back i {
     background-position: center center;
     background-size: cover;
     transform: translate3d(0px, 0px, 0px);
-    font-family: "zihun67hao-gouyuxingshu","KaiTi","宋体";
+    font-family: "zihun67hao-gouyuxingshu",'Comic Neue Angular',"华文新魏","KaiTi","宋体";
 }
 
 .index-cover {
@@ -913,13 +918,13 @@ article a:hover {
 article .card {
     border-radius: 8px;
     overflow: hidden;
-    
+    font-family: 'Comic Neue Angular',"华文新魏","KaiTi","宋体";
 }
 
 article .card-image {
     background-color: #222;
     border-radius: 8px;
-    font-family: "华文新魏","KaiTi","宋体";
+    font-family: 'Comic Neue Angular',"zihun67hao-gouyuxingshu","华文新魏","KaiTi","宋体";
 }
 
 article .card-image img {
@@ -1191,6 +1196,7 @@ article .article-tags .chip {
     margin: 2px 2px 10px;
     font-size: 1.05rem;
     line-height: 1.85rem;
+    font-family: 'Comic Neue Angular',"KaiTi","宋体";
 }
 
 #articleContent blockquote p {
