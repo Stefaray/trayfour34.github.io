@@ -735,7 +735,7 @@ $(function () {
         volume: Number('0.7'),
         listFolded: 'false' === 'true',
         listMaxHeight: '',
-        audio: eval([{"name":"温柔","artist":"五月天&孙燕姿","url":"http://q5okos5qx.bkt.clouddn.com/%E6%B8%A9%E6%9F%94.mp3","cover":"https://cdn.jsdelivr.net/gh/trayfour34/blog-photo-space/Blog_IMG/20200206020357.png"},{"name":"花海","artist":"周杰伦","url":"http://q5okos5qx.bkt.clouddn.com/%E8%8A%B1%E6%B5%B7.mp3","cover":"https://raw.githubusercontent.com/trayfour34/blog-photo-space/master/blog_files/img/PicGo-Github-PicBed/20200206020757.png"},{"name":"阴天快乐","artist":"陈奕迅","url":"http://q5okos5qx.bkt.clouddn.com/%E9%98%B4%E5%A4%A9%E5%BF%AB%E4%B9%90.mp3","cover":"https://raw.githubusercontent.com/trayfour34/blog-photo-space/master/blog_files/img/PicGo-Github-PicBed/20200206020846.png"}])
+        audio: eval([{"name":"温柔","artist":"五月天&孙燕姿","url":"http://ray34.cn-sh2.ufileos.com/home%2F%E6%B8%A9%E6%9F%94.mp3?UCloudPublicKey=WgpuviUBQ6_VqObDZvjkWUQCQxAIcTtQQKQ_D2UH&Signature=bghr28ZtVkj4MMBsKhJmANB3rxM%3D&Expires=1582376246","cover":"https://cdn.jsdelivr.net/gh/trayfour34/blog-photo-space/Blog_IMG/20200206020357.png"},{"name":"花海","artist":"周杰伦","url":"http://ray34.cn-sh2.ufileos.com/home%2F%E8%8A%B1%E6%B5%B7.mp3?UCloudPublicKey=WgpuviUBQ6_VqObDZvjkWUQCQxAIcTtQQKQ_D2UH&Signature=ayukW7zh4HV%2FFcUDR2QmHG0q1vs%3D&Expires=1582376269","cover":"https://raw.githubusercontent.com/trayfour34/blog-photo-space/master/blog_files/img/PicGo-Github-PicBed/20200206020757.png"},{"name":"阴天快乐","artist":"陈奕迅","url":"http://ray34.cn-sh2.ufileos.com/home/阴天快乐.mp3?UCloudPublicKey=WgpuviUBQ6_VqObDZvjkWUQCQxAIcTtQQKQ_D2UH&Signature=HwqHVm4r3o3uwpfTCTOhRHRzHUE%3D&Expires=1582376279","cover":"https://raw.githubusercontent.com/trayfour34/blog-photo-space/master/blog_files/img/PicGo-Github-PicBed/20200206020846.png"}])
     });
 });
 </script>
@@ -769,7 +769,7 @@ $(function () {
             preload: 'auto',
             volume: Number('0.7'),
             video: {
-                url: 'http://q5okos5qx.bkt.clouddn.com/Ray%27s%20Game%206.mp4',
+                url: 'http://ray34.cn-sh2.ufileos.com/home/Ray's Game 6.mp4?UCloudPublicKey=WgpuviUBQ6_VqObDZvjkWUQCQxAIcTtQQKQ_D2UH&Signature=PJRbGjnZaD7tisdd1GPepo4Cn7M%3D&Expires=1582375997',
                 pic: '',
                 thumbnails: ''
             }
@@ -1099,6 +1099,34 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
 
+    
+        <script src="//code.tidio.co/quw7chpahakshvyuv5u18ljotnfjxop0.js"></script>
+        <script> 
+            $(document).ready(function () {
+                setInterval(change_Tidio, 50);  
+                function change_Tidio() { 
+                    var tidio=$("#tidio-chat iframe");
+                    if(tidio.css("display")=="block"&& $(window).width()>977 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"85px":"20px";   
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";   
+                        document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    } 
+                    else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;   
+                        document.getElementById("tidio-chat-iframe").style.right="-15px"; 
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;   
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
+                        document.getElementById("tidio-chat-iframe").style.zIndex="998";
+                    }
+                } 
+            }); 
+        </script>
     
 
     
