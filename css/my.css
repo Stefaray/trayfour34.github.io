@@ -68,7 +68,7 @@
     height: auto;
     padding: 9px 45px 9px 45px;
     text-align: center;
-    display: inline; /后面无换行，宽度随内容变化/
+    display: inline;
     }
 
 .dt-p:hover {
