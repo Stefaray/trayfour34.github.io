@@ -155,6 +155,11 @@ pre {
     src: url('../font/ComicNeue-Angular-Regular.ttf');
 }
 
+@font-face{
+    font-family: 'zihun67hao-gouyuxingshu';
+    src: url('../font/gouyu.ttf');
+}
+
 code {
     padding: 1px 5px;
     top: 13px !important;
