@@ -618,28 +618,10 @@
                 </a>
                 
                 
-                <a href="/tags/%E8%BD%AC%E8%BD%BD/" title="转载: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="转载" style="background-color: #82E0AA;">转载
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/ray/" title="ray: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="ray" style="background-color: #D7BDE2;">ray
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/Rss/" title="Rss: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Rss" style="background-color: #A3E4D7;">Rss
+                            data-tagname="Rss" style="background-color: #82E0AA;">Rss
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -663,29 +645,11 @@
                 
                 
                 
-                <a href="/categories/%E6%95%99%E7%A8%8B/" title="教程: 2">
+                <a href="/categories/%E5%8F%91%E7%8E%B0/" title="发现: 3">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F9EBEA;">教程
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E9%9A%8F%E7%AC%94/" title="随笔: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F5EEF8;">随笔
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E5%8F%91%E7%8E%B0/" title="发现: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #D5F5E3;">发现
-                        <span class="tag-length">1</span>
+                            style="background-color: #F9EBEA;">发现
+                        <span class="tag-length">3</span>
                     </span>
                 </a>
                 
@@ -714,7 +678,7 @@
 <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"gripe","weight":1,"link":"https://trayfour34.github.io/tags/gripe/"},{"text":"blog","weight":1,"link":"https://trayfour34.github.io/tags/blog/"},{"text":"hexo","weight":1,"link":"https://trayfour34.github.io/tags/hexo/"},{"text":"Ucloud","weight":1,"link":"https://trayfour34.github.io/tags/Ucloud/"},{"text":"picgo","weight":1,"link":"https://trayfour34.github.io/tags/picgo/"},{"text":"七牛","weight":1,"link":"https://trayfour34.github.io/tags/七牛/"},{"text":"转载","weight":1,"link":"https://trayfour34.github.io/tags/转载/"},{"text":"ray","weight":1,"link":"https://trayfour34.github.io/tags/ray/"},{"text":"Rss","weight":1,"link":"https://trayfour34.github.io/tags/Rss/"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"gripe","weight":1,"link":"https://trayfour34.github.io/tags/gripe/"},{"text":"blog","weight":1,"link":"https://trayfour34.github.io/tags/blog/"},{"text":"hexo","weight":1,"link":"https://trayfour34.github.io/tags/hexo/"},{"text":"Ucloud","weight":1,"link":"https://trayfour34.github.io/tags/Ucloud/"},{"text":"picgo","weight":1,"link":"https://trayfour34.github.io/tags/picgo/"},{"text":"七牛","weight":1,"link":"https://trayfour34.github.io/tags/七牛/"},{"text":"Rss","weight":1,"link":"https://trayfour34.github.io/tags/Rss/"}], {
         autoResize: true
     });
 </script>
@@ -756,7 +720,7 @@
                     color: '#3C4858'
                 }
             },
-            indicator: [{"name":"教程","max":3},{"name":"随笔","max":3},{"name":"发现","max":3}],
+            indicator: [{"name":"发现","max":6}],
             nameGap: 5,
             center: ['50%','55%'],
             radius: '66%'
@@ -767,7 +731,7 @@
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data : [
                 {
-                    value : [2,1,1],
+                    value : [3],
                     name : '文章分类数量'
                 }
             ]
@@ -837,7 +801,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,0,0,0,5],
+                data: [0,0,0,0,0,0,0,0,0,0,0,0,4],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -879,7 +843,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"教程","value":2},{"name":"随笔","value":1},{"name":"发现","value":1}],
+                data: [{"name":"发现","value":3}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -903,7 +867,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["gripe","blog","hexo","Ucloud","picgo","七牛","转载","ray","Rss"]
+                data: ["gripe","blog","hexo","Ucloud","picgo","七牛","Rss"]
             }
         ],
         yAxis: [
@@ -916,7 +880,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [1,1,1,1,1,1,1,1,1],
+                data: [1,1,1,1,1,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -958,7 +922,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">6.7k</span>&nbsp;字
+                class="white-color">3k</span>&nbsp;字
             
             
             
