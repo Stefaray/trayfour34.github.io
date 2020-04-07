@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-loading-blocal_searchar.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"trayfour34.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="引言域名申请之后的第三个星期，阿里云终于通过了我的域名审核。鉴于此前dmca服务器架设在国外，本地阅览我博客里面的音乐视频效果都不是太好。加上picgo图床存放下的图片集杂乱无章，不好整理归档。因此我想寻找一个真正能够存放托管我博客大小文件的空间。此篇记录了我解决此问题的简要经历。 picgo博客中的文件，其实就是以图片视频音频这三类为主。在最开始的时候，为了简化操作，我将所有的文件都放在了项目根">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ucloud----对象存储的最终选择">
+<meta property="og:url" content="https://trayfour34.github.io/posts/64617.html">
+<meta property="og:site_name" content="">
+<meta property="og:description" content="引言域名申请之后的第三个星期，阿里云终于通过了我的域名审核。鉴于此前dmca服务器架设在国外，本地阅览我博客里面的音乐视频效果都不是太好。加上picgo图床存放下的图片集杂乱无章，不好整理归档。因此我想寻找一个真正能够存放托管我博客大小文件的空间。此篇记录了我解决此问题的简要经历。 picgo博客中的文件，其实就是以图片视频音频这三类为主。在最开始的时候，为了简化操作，我将所有的文件都放在了项目根">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2FUcloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9%2F1.png">
+<meta property="og:image" content="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2FUcloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9%2F2.png">
+<meta property="og:image" content="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2FUcloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9%2F3.png">
+<meta property="og:image" content="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2FUcloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9%2F4.png">
+<meta property="og:image" content="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2FUcloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9%2F5.png">
+<meta property="og:image" content="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2FUcloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9%2F6.png">
+<meta property="og:image" content="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2FUcloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9%2F7.png">
+<meta property="article:published_time" content="2020-02-25T08:21:30.000Z">
+<meta property="article:modified_time" content="2020-02-26T15:54:23.407Z">
+<meta property="article:author" content="ray">
+<meta property="article:tag" content="Ucloud">
+<meta property="article:tag" content="picgo">
+<meta property="article:tag" content="七牛">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2FUcloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9%2F1.png">
+
+<link rel="canonical" href="https://trayfour34.github.io/posts/64617.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Ucloud----对象存储的最终选择 | </title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title"></h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">时间之间</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://trayfour34.github.io/posts/64617.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="ray">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Ucloud----对象存储的最终选择
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-25 16:21:30" itemprop="dateCreated datePublished" datetime="2020-02-25T16:21:30+08:00">2020-02-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-26 23:54:23" itemprop="dateModified" datetime="2020-02-26T23:54:23+08:00">2020-02-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8F%91%E7%8E%B0/" itemprop="url" rel="index"><span itemprop="name">发现</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>域名申请之后的第三个星期，阿里云终于通过了我的域名审核。鉴于此前dmca服务器架设在国外，本地阅览我博客里面的音乐视频效果都不是太好。加上picgo图床存放下的图片集杂乱无章，不好整理归档。因此我想寻找一个真正能够存放托管我博客大小文件的空间。此篇记录了我解决此问题的简要经历。</p>
+<h3 id="picgo"><a href="#picgo" class="headerlink" title="picgo"></a>picgo</h3><p>博客中的文件，其实就是以图片视频音频这三类为主。在最开始的时候，为了简化操作，我将所有的文件都放在了项目根目录下，简单快捷，但对于网站的访问速度来说却是一大灾难。因此在后期优化的过程中，我开始寻找能够生成外链的公共空间。picgo+github存储是网上比较潮流的生成图片外链的方法。的确，在github平台的托管下，你可以在保证不掏腰包的状态下还能拥有无限的下载流量和无限的存储空间。而且上传下载速度也不用担心，因为在手动融合jsdelivr技术于此图床之后，就等同于拥有一个免费的cdn给你的博客加速，简直不能再好了。</p>
+<blockquote>
+<p>picgo样例：<a href="https://cdn.jsdelivr.net/gh/trayfour34/blog-photo-space/Blog_IMG/20200206020357.png" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/trayfour34/blog-photo-space/Blog_IMG/20200206020357.png</a></p>
+</blockquote>
+<h3 id="dmca"><a href="#dmca" class="headerlink" title="dmca"></a>dmca</h3><p>事实上，上面这个方法确实十分完美的解决了我80%的问题。可是picgo图床终归只是图床，github上也只能存放着我类似于png、bmp、jpg等图片类型，音乐和视频这些比较大的文件却无法存放于此。因此我想，只要再找个空间能够存放音频也就解决了。一顿知乎之后，发现dmca.gripe免费又简单，测试中流量速度也不慢。行，就它了！</p>
+<p>理论上这个问题到此为止就算完美解决了。但后来同学测试完反映情况后我才知道，原来关了vpn之后加载速度堪忧，进度条半天才向前滑一点点。因此我只能另寻出路。</p>
+<h3 id="七牛云"><a href="#七牛云" class="headerlink" title="七牛云"></a>七牛云</h3><p>之前，无论是图床还是音频空间，我主要是寻求一些比较次的免费产品，能省即省嘛<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f605.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f605.png?v8">😅</span>在dmca之后，我也尝试了<a href="https://coka.la/" target="_blank" rel="noopener">Coka.la</a>、<a href="https://streamable.com/" target="_blank" rel="noopener">Streamable</a>等，效果都不是太好。所以我转向寻求大产，寄希望于能碰上某个大产推出免费产品活动的契机（可惜没有）。腾讯云两年前还是可以白嫖的，现在似乎都没了，只推出免费六个月活动。阿里云和华为云需要长期收费。正当山重水复的时候，七牛云映入眼前，一个域名可享每日10G流量+10G存储空间+cdn加速，关键是免费啊。于是把东西都搬了过去，最后测试速度也没问题。大功告成！</p>
+<blockquote>
+<p>七牛云样例：<a href="http://q5okos5qx.bkt.clouddn.com/%E6%B8%A9%E6%9F%94.mp3" target="_blank" rel="noopener">温柔.mp3</a></p>
+</blockquote>
+<h3 id="备案风波"><a href="#备案风波" class="headerlink" title="备案风波"></a>备案风波</h3><p>但是几天之后我才发现，我忽略了一行小小的tip，如下</p>
+<img src="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2FUcloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9%2F1.png" alt="tip" style="zoom: 67%;">
+
+<p>也就是说，它给我的是一个测试域名，测试域名要回收，需要创建自定义域名才能永久使用。然而创建自定义域名要将域名备案……</p>
+<img src="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2FUcloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9%2F2.png" alt="备案域名才能使用" style="zoom: 67%;">
+
+<p>行，备案就备案吧，再等个几天也不是什么事儿。</p>
+<p>然而，当我把填写备案信息的时候我才发现，原来备案要买备案商的服务器或者虚拟主机，阿里云最便宜的也要一百多块一年….额溜了溜了。</p>
+<img src="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2FUcloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9%2F3.png" alt="备案" style="zoom: 50%;">
+
+<p>那个时候还想看看能不能白嫖到一台云主机来备案，所以从阿里云的<strong>万网虚机试用</strong>服务和aws的一年免费主机，但都显示只有转正了才能备案。这条路也断了…</p>
+<h3 id="Ucloud"><a href="#Ucloud" class="headerlink" title="Ucloud"></a>Ucloud</h3><p>最后在漫无目的的搜寻之中，我发现了青云和Ucloud两个不太出名的云服务商。Ucloud推出每个月20G的流量+20G的存储空间，完全适用于小博客的运维。而且Ucloud的客服真的是圈粉了，提交的工单总是能在很短的时间内就予以回复。在开通之前还给我通了个电话，确认我开通对象存储的要求，并嘱咐我注意流量的使用，因为流量超出是没有短信提醒的。（亲身经历，不是打广告<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">😄</span>）</p>
+<p><img src="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2FUcloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9%2F4.png" alt="(工单)"></p>
+<blockquote>
+<p>Ucloud样例：<a href="http://ray34.cn-sh2.ufileos.com/home%2F%E6%B8%A9%E6%9F%94.png" target="_blank" rel="noopener">http://ray34.cn-sh2.ufileos.com/home%2F%E6%B8%A9%E6%9F%94.png</a></p>
+</blockquote>
+<p>而且它提供一个域名多个地区服务，每个地区20G流量+20G空间。结算下来一百多G，已经是很大很大了。如果能自己实现负载均衡的话，后台就可以自己判断哪个地区的空间多，然后自动把文件放在哪里。具体的实现可以看看这篇文章   <a href="https://www.xiebruce.top/644.html" target="_blank" rel="noopener">使用nginx负载均衡+多个云的免费额度打造免费markdown图床</a>    </p>
+<p>另外，相比之下Ucloud还有一点做的很好，就是文件归档。对比七牛或者阿里云亦或是picgo图床，Ucloud可以像在本地新建文件夹命名文件夹一样，把图片视频以文件夹的形式分好。对比如下：</p>
+<p><img src="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2FUcloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9%2F5.png" alt="(七牛云)"></p>
+<p><img src="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2FUcloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9%2F6.png" alt="(picgo)"></p>
+<p><img src="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2FUcloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9%2F7.png" alt="(Ucloud)"></p>
+<h3 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h3><p>至此，这个问题终究告一段落，不会再有反转了哈哈。在这个过程中我也懂了不少东西，也并非完全浪费时间<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8">😏</span>其中还发现了阿里云的虚机试用，后续可以借此机会好好看看。</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>ray
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://trayfour34.github.io/posts/64617.html" title="Ucloud----对象存储的最终选择">https://trayfour34.github.io/posts/64617.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Ucloud/" rel="tag"># Ucloud</a>
+              <a href="/tags/picgo/" rel="tag"># picgo</a>
+              <a href="/tags/%E4%B8%83%E7%89%9B/" rel="tag"># 七牛</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/20976.html" rel="prev" title="dmca.gripe:永久托管你的小文件">
+      <i class="fa fa-chevron-left"></i> dmca.gripe:永久托管你的小文件
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/22328.html" rel="next" title="如何订阅我的博客（不要脸">
+      如何订阅我的博客（不要脸 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#picgo"><span class="nav-number">2.</span> <span class="nav-text">picgo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dmca"><span class="nav-number">3.</span> <span class="nav-text">dmca</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#七牛云"><span class="nav-number">4.</span> <span class="nav-text">七牛云</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#备案风波"><span class="nav-number">5.</span> <span class="nav-text">备案风波</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ucloud"><span class="nav-number">6.</span> <span class="nav-text">Ucloud</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#尾声"><span class="nav-number">7.</span> <span class="nav-text">尾声</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ray"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">ray</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+      
+        <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+        <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+        <div class="widget-wrap">
+        <h3 class="widget-title">Tag Cloud</h3>
+              <div id="myCanvasContainer" class="widget tagcloud">
+                    <canvas width="250" height="250" id="resCanvas" style="width=100%">
+                       <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Rss/" rel="tag">Rss</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ucloud/" rel="tag">Ucloud</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gripe/" rel="tag">gripe</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/picgo/" rel="tag">picgo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%83%E7%89%9B/" rel="tag">七牛</a><span class="tag-list-count">1</span></li></ul>
+                    </canvas>
+              </div>
+        </div>
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ray</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+  
+  
+
+  
+
+
+</body>
+</html>
+
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
+
+
+
+
+
+
+
+
