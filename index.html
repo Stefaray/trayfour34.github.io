@@ -1,1349 +1,849 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="zh-CN">
-
-
 <head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="renderer" content="webkit|ie-stand|ie-comp">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title></title>
-    <link rel="icon" type="image/png" href="/favicon.png">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
 
-    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/matery.css">
-    <link rel="stylesheet" type="text/css" href="/css/my.css">
-    
-    <script src="/libs/jquery/jquery.min.js"></script>
-    
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="" type="application/atom+xml">
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-loading-blocal_searchar.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"trayfour34.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:url" content="https://trayfour34.github.io/index.html">
+<meta property="og:site_name" content="">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="ray">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://trayfour34.github.io/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title></title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
-<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-<body>
-    <header class="navbar-fixed">
-    <nav id="headNav" class="bg-color nav-transparent">
-        <div id="navContainer" class="nav-wrapper container">
-            <div class="brand-logo">
-                <a href="/" class="waves-effect waves-light">
-                    
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
-                    
-                    <span class="logo-span"></span>
-                </a>
-            </div>
-            
-
-<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
-<ul class="right nav-menu">
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/" class="waves-effect waves-light">
-      
-      <i class="fas fa-home" style="zoom: 0.6;"></i>
-      
-      <span>首页</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/categories" class="waves-effect waves-light">
-
-      
-      <i class="fas fa-archive" style="zoom: 0.6;"></i>
-      
-      <span>分类</span>
-      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
-    </a>
-    <ul class="sub-nav menus_item_child ">
-      
-      <li>
-        <a href="/categories/%E8%AF%AD%E8%A8%80">
-          
-          <i class="fas fa-tags" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>语言</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/categories/%E6%8A%80%E6%9C%AF">
-          
-          <i class="fas fa-tags" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>技术</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/categories/%E5%8F%91%E7%8E%B0">
-          
-          <i class="fas fa-tags" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>发现</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/categories/%E9%9A%8F%E7%AC%94">
-          
-          <i class="fas fa-tags" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>随笔</span>
-        </a>
-      </li>
-      
-    </ul>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="" class="waves-effect waves-light">
-
-      
-      <i class="fas fa-list" style="zoom: 0.6;"></i>
-      
-      <span>清单</span>
-      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
-    </a>
-    <ul class="sub-nav menus_item_child ">
-      
-      <li>
-        <a href="/gallery">
-          
-          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>相册</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/video">
-          
-          <i class="fas fa-video" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>视频</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/music">
-          
-          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>音乐</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/books">
-          
-          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>书单</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/movies">
-          
-          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>影剧</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/sentence">
-          
-          <i class="fas fa-paper-plane" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>一句</span>
-        </a>
-      </li>
-      
-    </ul>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="" class="waves-effect waves-light">
-
-      
-      <i class="fas fa-tools" style="zoom: 0.6;"></i>
-      
-      <span>工具</span>
-      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
-    </a>
-    <ul class="sub-nav menus_item_child ">
-      
-      <li>
-        <a href="/MyMarkdown">
-          
-          <i class="fab fa-markdown" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>markdown</span>
-        </a>
-      </li>
-      
-    </ul>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/statistic" class="waves-effect waves-light">
-      
-      <i class="fas fa-chart-line" style="zoom: 0.6;"></i>
-      
-      <span>统计</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/archives" class="waves-effect waves-light">
-      
-      <i class="fas fa-edit" style="zoom: 0.6;"></i>
-      
-      <span>归档</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fab fa-weixin" style="zoom: 0.6;"></i>
-      
-      <span>留言板</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/about" class="waves-effect waves-light">
-      
-      <i class="fas fa-user" style="zoom: 0.6;"></i>
-      
-      <span>关于</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/friends" class="waves-effect waves-light">
-      
-      <i class="fas fa-link" style="zoom: 0.6;"></i>
-      
-      <span>友情链接</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="https://mailchi.mp/b3c90ec4f2c7/rss" class="waves-effect waves-light">
-      
-      <i class="fas fa-rss" style="zoom: 0.6;"></i>
-      
-      <span>订阅本站</span>
-    </a>
-    
-  </li>
-  
-  <li>
-    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
-    </a>
-  </li>
-</ul>
-
-<div id="mobile-nav" class="side-nav sidenav">
-
-    <div class="mobile-head bg-color">
-        
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
-        
-        <div class="logo-name"></div>
-        <div class="logo-desc">
-            
-            Never really desperate, only the lost of the soul.
-            
-        </div>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
+  </div>
 
-    
+  <div class="site-meta">
 
-    <ul class="menu-list mobile-menu-list">
-        
-        <li class="m-nav-item">
-	  
-		<a href="/" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-home"></i>
-			
-			首页
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="javascript:;">
-			
-				<i class="fa-fw fas fa-archive"></i>
-			
-			分类
-			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
-		</a>
-            <ul  style="background:  ;" >
-              
-                <li>   
-				
-                  <a href="/categories/%E8%AF%AD%E8%A8%80 " style="margin-left:50px";>
-				  
-				   <i class="fa fas fa-tags" style="position: absolute;left:28px" ></i>
-			      
-		          <span>语言</span>
-                  </a>
-                </li>
-              
-                <li>   
-				
-                  <a href="/categories/%E6%8A%80%E6%9C%AF " style="margin-left:50px";>
-				  
-				   <i class="fa fas fa-tags" style="position: absolute;left:28px" ></i>
-			      
-		          <span>技术</span>
-                  </a>
-                </li>
-              
-                <li>   
-				
-                  <a href="/categories/%E5%8F%91%E7%8E%B0 " style="margin-left:50px";>
-				  
-				   <i class="fa fas fa-tags" style="position: absolute;left:28px" ></i>
-			      
-		          <span>发现</span>
-                  </a>
-                </li>
-              
-                <li>   
-				
-                  <a href="/categories/%E9%9A%8F%E7%AC%94 " style="margin-left:50px";>
-				  
-				   <i class="fa fas fa-tags" style="position: absolute;left:28px" ></i>
-			      
-		          <span>随笔</span>
-                  </a>
-                </li>
-               
-            </ul>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="javascript:;">
-			
-				<i class="fa-fw fas fa-list"></i>
-			
-			清单
-			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
-		</a>
-            <ul  style="background:  ;" >
-              
-                <li>   
-				
-                  <a href="/gallery " style="margin-left:50px";>
-				  
-				   <i class="fa fas fa-image" style="position: absolute;left:28px" ></i>
-			      
-		          <span>相册</span>
-                  </a>
-                </li>
-              
-                <li>   
-				
-                  <a href="/video " style="margin-left:50px";>
-				  
-				   <i class="fa fas fa-video" style="position: absolute;left:28px" ></i>
-			      
-		          <span>视频</span>
-                  </a>
-                </li>
-              
-                <li>   
-				
-                  <a href="/music " style="margin-left:50px";>
-				  
-				   <i class="fa fas fa-music" style="position: absolute;left:28px" ></i>
-			      
-		          <span>音乐</span>
-                  </a>
-                </li>
-              
-                <li>   
-				
-                  <a href="/books " style="margin-left:50px";>
-				  
-				   <i class="fa fas fa-book" style="position: absolute;left:28px" ></i>
-			      
-		          <span>书单</span>
-                  </a>
-                </li>
-              
-                <li>   
-				
-                  <a href="/movies " style="margin-left:50px";>
-				  
-				   <i class="fa fas fa-film" style="position: absolute;left:28px" ></i>
-			      
-		          <span>影剧</span>
-                  </a>
-                </li>
-              
-                <li>   
-				
-                  <a href="/sentence " style="margin-left:50px";>
-				  
-				   <i class="fa fas fa-paper-plane" style="position: absolute;left:28px" ></i>
-			      
-		          <span>一句</span>
-                  </a>
-                </li>
-               
-            </ul>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="javascript:;">
-			
-				<i class="fa-fw fas fa-tools"></i>
-			
-			工具
-			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
-		</a>
-            <ul  style="background:  ;" >
-              
-                <li>   
-				
-                  <a href="/MyMarkdown " style="margin-left:50px";>
-				  
-				   <i class="fa fab fa-markdown" style="position: absolute;left:28px" ></i>
-			      
-		          <span>markdown</span>
-                  </a>
-                </li>
-               
-            </ul>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/statistic" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-chart-line"></i>
-			
-			统计
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/archives" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-edit"></i>
-			
-			归档
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fab fa-weixin"></i>
-			
-			留言板
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/about" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-user"></i>
-			
-			关于
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/friends" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-link"></i>
-			
-			友情链接
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="https://mailchi.mp/b3c90ec4f2c7/rss" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-rss"></i>
-			
-			订阅本站
-		</a>
-          
-        </li>
-        
-        
-    </ul>
-</div>
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title"></h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">时间之间</p>
+  </div>
 
-        </div>
-
-        
-    </nav>
-
-</header>
-
-    
-<style>
-    .carousel-control {
-        width: 45px;
-        height: 45px;
-        line-height: 55px;
-        border-radius: 45px;
-        background: transparent;
-        cursor: pointer;
-        z-index: 100;
-    }
-
-    #prev-cover {
-        position: absolute;
-        top: 48%;
-        left: 8px;
-    }
-
-    #next-cover {
-        position: absolute;
-        top: 48%;
-        right: 8px;;
-    }
-
-    #prev-cover i {
-        margin-right: 3px;
-    }
-
-    #next-cover i {
-        margin-left: 3px;
-    }
-
-    .carousel-control:hover {
-        background-color:rgba(0, 0, 0, .4);
-    }
-
-    .carousel-control i {
-        color: #fff;
-        font-size: 2.4rem;
-    }
-</style>
-
-
-
-<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
-    
-
-    <div class="carousel-item red white-text bg-cover about-cover">
-        <div class="container">
-            <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                时间之间
-                
-            </div>
-
-            <div class="description center-align">
-                
-                
-                <span id="jinrishici-sentence">正在加载今日诗词....</span>
-                
-            </div>
-        </div>
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
+  </div>
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
-</script>
 
 
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
 
-            <div class="cover-btns">
-                <a href="#indexCard" class="waves-effect waves-light btn">
-                    <i class="fa fa-angle-double-down"></i>开始阅读
-                </a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
-                
-                    <a href="https://github.com/trayfour34/trayfour34.github.io" class="waves-effect waves-light btn" target="_blank">
-                        <i class="fab fa-github-alt"></i>Github
-                    </a>
-                
-            </div>
-            <div class="cover-social-link">
-    <a href="https://github.com/trayfour34" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
+  </li>
+        <li class="menu-item menu-item-about">
 
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
 
+  </li>
+        <li class="menu-item menu-item-tags">
 
-    <a href="mailto:2819125018@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
 
+  </li>
+        <li class="menu-item menu-item-categories">
 
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
 
+  </li>
+        <li class="menu-item menu-item-archives">
 
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
-    <a href="https://twitter.com/RayAlle11576586" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/RayAlle11576586" data-position="top" data-delay="50">
-        <i class="fab fa-twitter"></i>
-    </a>
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2819125018" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2819125018" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-
-
-    <a href="https://www.zhihu.com/people/crown180808" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/crown180808" data-position="top" data-delay="50">
-        <i class="fab fa-zhihu1">知</i>
-    </a>
-
-
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
-
-</div>
-        </div>
-    </div>
-
-    
-</div>
-
-<script>
-    $(function () {
-        let coverSlider = $('.carousel');
-        coverSlider.carousel({
-            duration: Number('120'),
-            fullWidth: true,
-            indicators: 'true' === 'true'
-        });
-
-        let carouselIntervalId;
-        
-        // Loop to call the next cover article picture.
-        let autoCarousel = function() {
-            carouselIntervalId = setInterval(function () {
-                coverSlider.carousel('next');
-            }, 5000);
-        };
-        autoCarousel();
-        
-
-        let restartPlay = function () {
-            
-            clearInterval(carouselIntervalId);
-            autoCarousel();
-            
-        };
-
-        
-        // prev and next cover post.
-        $('#prev-cover').click(function () {
-            coverSlider.carousel('prev');
-            restartPlay();
-        });
-        $('#next-cover').click(function () {
-            coverSlider.carousel('next');
-            restartPlay();
-        });
-        
-    });
-</script>
-
-
-
-<main class="content">
-
-    
-    <div id="indexCard" class="index-card">
-        <div class="container">
-            <div class="card tmptmp">
-                <div class="card-content">
-                    
-
-                    
-                        
-
-<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<div class="music-player">
-    
-    <div class="title center-align">
-        <i class="fas fa-music"></i>&nbsp;&nbsp;听听音乐
-    </div>
-    
-    <div class="row">
-        <div class="col l8 offset-l2 m10 offset-m1 s12">
-            <div id="aplayer" class="music"></div>
-        </div>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script>
-$(function () {
-    new APlayer({
-        container: document.getElementById('aplayer'),
-        fixed: 'false' === 'true',
-        autoplay: 'false' === 'true',
-        theme: '#42b983',
-        loop: 'all',
-        order: 'list',
-        preload: 'auto',
-        volume: Number('0.7'),
-        listFolded: 'false' === 'true',
-        listMaxHeight: '',
-        audio: eval([{"name":"温柔","artist":"五月天&孙燕姿","url":"http://ray34.cn-sh2.ufileos.com/home%2F%E6%B8%A9%E6%9F%94.mp3","cover":"https://cdn.jsdelivr.net/gh/trayfour34/blog-photo-space/Blog_IMG/20200206020357.png"},{"name":"花海","artist":"周杰伦","url":"http://ray34.cn-sh2.ufileos.com/home%2F%E8%8A%B1%E6%B5%B7.mp3","cover":"https://cdn.jsdelivr.net/gh/trayfour34/blog-photo-space/Blog_IMG/花海.jpg"},{"name":"阴天快乐","artist":"陈奕迅","url":"http://ray34.cn-sh2.ufileos.com/home%2F%E9%98%B4%E5%A4%A9%E5%BF%AB%E4%B9%90.mp3","cover":"https://cdn.jsdelivr.net/gh/trayfour34/blog-photo-space/Blog_IMG/阴天快乐.jpg"}])
-    });
-});
-</script>
-                    
-
-                    <!-- 
-                        <link rel="stylesheet" href="/libs/dplayer/DPlayer.min.css">
-<div class="video-player">
-    
-    <div class="title center-align">
-        <i class="fas fa-video-camera"></i>&nbsp;&nbsp;精彩视频
-    </div>
-    
-    <div class="row">
-        <div class="col l8 offset-l2 m10 offset-m1 s12">
-            <div id="dplayer" class="dplayer-video"
-                    ></div>
-        </div>
-    </div>
-</div>
-
-<script src="/libs/dplayer/DPlayer.min.js"></script>
-<script>
-    $(function () {
-        new DPlayer({
-            container: document.getElementById('dplayer'),
-            autoplay: 'false' === 'true',
-            theme: '#42b983',
-            loop: 'false' === 'true',
-            lang: 'zh-CN' === 'zh-CN' ? 'zh-cn' : 'en',
-            preload: 'auto',
-            volume: Number('0.7'),
-            video: {
-                url: 'http://ray34.cn-sh2.ufileos.com/home%2FRay%20Game%206.mp4',
-                pic: '',
-                thumbnails: ''
-            }
-        });
-    });
-</script>
-                     -->
-
-                    
-                    <div id="recommend-sections" class="recommend">
-                        
-
-
-
-
-
-<div class="title"><i class="far fa-thumbs-up"></i>&nbsp;&nbsp;推荐文章</div>
-
-<div class="row">
-
-    
-    
-    <div class="col s12" >
-        <div class="post-card" style="background-image: url('/medias/featureimages/6.jpg')">
-            <div class="post-body">
-                <div class="post-categories">
-                    
-                        
-                            <a href="/categories/%E5%8F%91%E7%8E%B0/" class="category">发现</a>
-                        
-                    
-                </div>
-                <a href="/posts/64617.html">
-                    <h3 class="post-title">Ucloud----对象存储的最终选择</h3>
-                </a>
-                <p class="post-description">引言域名申请之后的第三个星期，阿里云终于通过了我的域名审核。鉴于此前dmca服务器架设在国外，本地阅览我博客里面的音乐视频效果都不是太好。加上picgo图床存放下的图片集</p>
-                <a href="/posts/64617.html" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i>阅读更多
-                </a>
-            </div>
-        </div>
-    </div>
-    
-
-</div>
-
-
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-    
-
-    
-
-    
-
-    <!-- 所有文章卡片 -->
-    <article id="articles" class="container articles">
-        <div class="row article-row">
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/22328.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="如何订阅我的博客（不要脸">
-                            
-                            <span class="card-title">如何订阅我的博客（不要脸</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                引言我们常常会有订阅别人文章的需求，有更新的时候希望能有提醒的功能，如同QQ里面的特别关注一样，对方只要一发说说就有消息提醒，及时收到消息。那我也时常在思（yi）考（ying），能不能让我的博客也做到像公众号一样，只要有新的博文发出来，订阅
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-25
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%8F%91%E7%8E%B0/" class="post-category">
-                                    发现
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Rss/">
-                            <span class="chip bg-color">Rss</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/64617.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Ucloud----对象存储的最终选择">
-                            
-                            <span class="card-title">Ucloud----对象存储的最终选择</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                引言域名申请之后的第三个星期，阿里云终于通过了我的域名审核。鉴于此前dmca服务器架设在国外，本地阅览我博客里面的音乐视频效果都不是太好。加上picgo图床存放下的图片集杂乱无章，不好整理归档。因此我想寻找一个真正能够存放托管我博客大小文件
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-25
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%8F%91%E7%8E%B0/" class="post-category">
-                                    发现
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Ucloud/">
-                            <span class="chip bg-color">Ucloud</span>
-                        </a>
-                        
-                        <a href="/tags/picgo/">
-                            <span class="chip bg-color">picgo</span>
-                        </a>
-                        
-                        <a href="/tags/%E4%B8%83%E7%89%9B/">
-                            <span class="chip bg-color">七牛</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/20976.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="dmca.gripe:永久托管你的小文件">
-                            
-                            <span class="card-title">dmca.gripe:永久托管你的小文件</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                引言此篇是我严格意义上的第一篇博文。选择这个主题也是因为在后续优化博客的过程中碰到了相应的问题。故借此机会写下来分享分享。
-因为自己想要在博客中增添音乐和视频板块，在搭建博客的时候参考别人的博客，发现大部分人都是去通过找寻免费的音频网站，获
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-14
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%8F%91%E7%8E%B0/" class="post-category">
-                                    发现
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/gripe/">
-                            <span class="chip bg-color">gripe</span>
-                        </a>
-                        
-                        <a href="/tags/blog/">
-                            <span class="chip bg-color">blog</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/16107.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Hello World">
-                            
-                            <span class="card-title">Hello World</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Welcome to Hexo! This is my very first post. Check documentation for more info. If you get any problems when using Hexo,
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-03
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    随笔
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/hexo/">
-                            <span class="chip bg-color">hexo</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-        </div>
-    </article>
-
-</main>
-
-
-
-
-    <footer class="page-footer bg-color">
-    <div class="container row center-align" style="margin-bottom: 15px !important;">
-        <div class="col s12 m8 l8 copy-right">
-            Copyright&nbsp;&copy;
-            <span id="year">2020</span>
-            <a href="https://trayfour34.github.io" target="_blank">ray</a>
-            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
-            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
-            <br>
-            
-            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.3k</span>&nbsp;字
-            
-            
-            
-            
-            
-            
-            <span id="busuanzi_container_site_pv">
-                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
-                    class="white-color"></span>&nbsp;次
-            </span>
-            
-            
-            <span id="busuanzi_container_site_uv">
-                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
-                    class="white-color"></span>&nbsp;人
-            </span>
-            
-            <br>
-            
-            <span id="sitetime">载入运行时间...</span>
-            <script>
-                function siteTime() {
-                    var seconds = 1000;
-                    var minutes = seconds * 60;
-                    var hours = minutes * 60;
-                    var days = hours * 24;
-                    var years = days * 365;
-                    var today = new Date();
-                    var startYear = "2020";
-                    var startMonth = "2";
-                    var startDate = "3";
-                    var startHour = "11";
-                    var startMinute = "19";
-                    var startSecond = "0";
-                    var todayYear = today.getFullYear();
-                    var todayMonth = today.getMonth() + 1;
-                    var todayDate = today.getDate();
-                    var todayHour = today.getHours();
-                    var todayMinute = today.getMinutes();
-                    var todaySecond = today.getSeconds();
-                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
-                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-                    var diff = t2 - t1;
-                    var diffYears = Math.floor(diff / years);
-                    var diffDays = Math.floor((diff / days) - diffYears * 365);
-                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
-                        minutes);
-                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
-                        diffMinutes * minutes) / seconds);
-                    if (startYear == todayYear) {
-                        document.getElementById("year").innerHTML = todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
-                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-                    } else {
-                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
-                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-                    }
-                }
-                setInterval(siteTime, 1000);
-            </script>
-            
-            <br>
-            
-        </div>
-        <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/trayfour34" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
-
-
-    <a href="mailto:2819125018@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-
-
-    <a href="https://twitter.com/RayAlle11576586" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/RayAlle11576586" data-position="top" data-delay="50">
-        <i class="fab fa-twitter"></i>
-    </a>
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2819125018" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2819125018" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-
-
-    <a href="https://www.zhihu.com/people/crown180808" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/crown180808" data-position="top" data-delay="50">
-        <i class="fab fa-zhihu1">知</i>
-    </a>
-
-
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
-
-</div>
-    </div>
-</footer>
-
-<div class="progress-bar"></div>
-
-
-<script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?f8b7eb3fa775424fca6cbd08147ee955";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-</script>
-    
-
-    <!-- 搜索遮罩框 -->
-<div id="searchModal" class="modal">
-    <div class="modal-content">
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
         <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
-            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
-                   class="search-input">
-        </div>
-        <div id="searchResult"></div>
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
     </div>
+  </div>
+
 </div>
+    </header>
 
-<script src="/js/search.js"></script>
-<script type="text/javascript">
-$(function () {
-    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
-});
-</script>
-    <!-- 回到顶部按钮 -->
-<div id="backTop" class="top-scroll">
-    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-</div>
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <script src="/libs/materialize/materialize.min.js"></script>
-    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/libs/aos/aos.js"></script>
-    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="/js/matery.js"></script>
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://trayfour34.github.io/posts/22328.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="ray">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/22328.html" class="post-title-link" itemprop="url">如何订阅我的博客（不要脸</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-25 22:21:30" itemprop="dateCreated datePublished" datetime="2020-02-25T22:21:30+08:00">2020-02-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-03 16:51:47" itemprop="dateModified" datetime="2020-03-03T16:51:47+08:00">2020-03-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8F%91%E7%8E%B0/" itemprop="url" rel="index"><span itemprop="name">发现</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>我们常常会有订阅别人文章的需求，有更新的时候希望能有提醒的功能，如同QQ里面的特别关注一样，对方只要一发说说就有消息提醒，及时收到消息。那我也时常在思（yi）考（ying），能不能让我的博客也做到像公众号一样，只要有新的博文发出来，订阅我博客的朋友们就能收到提醒。</p>
+<p>RSS就是这样的一个订阅的方式。虽然生在如今信息爆炸、推荐系统完善的时代，rss这种十年前的技术已经与当今时代格格不入，但总有人就喜欢rss这种传统的订阅推荐方式、而非类似抖音知乎一般通过你的浏览记录拼命计算推出你可能喜欢的视频或者文章。也总有rss能够立足扎根的地方。你也可以用rss来接收类似b站某个博主的新视频，或者微博某个博主的新微博等等。</p>
+<p>我的博客就用rss来实现订阅功能。</p>
+<p>可能有人会觉得奇怪，网站不如微信一般有一人一个账号对应，新的文章通过微信id精准推送。那还能订阅吗？</p>
+<p>确实，我一开始的想法是想通过邮箱绑定实现推送，当有人在我的博客里绑定了邮箱之后，每当有新的文章发出，邮箱就能发出一封邮件及时查收。我们常用的QQ邮箱也有此功能，但当我实践实验的时候，却发现QQ邮箱里面的阅读空间并不能包揽网上所有的订阅，其实就是推送源有限。因此这条路似乎行不通。</p>
+<p>后来转念一想，其实要订阅某个网站的新推送，其实也不一定需要客户端支持。我们天天登陆的浏览器也可以呀。</p>
+<p>当你登陆浏览器的时候，倘若能有一个图标，在新文章推送后不久有一个红点或者 ‘+’ 号，那也可以实现推送功能。</p>
+<p>接下来，我主要讲述谷歌浏览器的Rss订阅配置。</p>
+<h3 id="Google"><a href="#Google" class="headerlink" title="Google"></a>Google</h3><blockquote>
+<p>谷歌订阅可能需要你有科学上网的工具。（有时间我再研究一下其他浏览器免翻墙的订阅配置）</p>
+</blockquote>
+<p>打开<a href="https://chrome.google.com/webstore/category/extensions?hl=zh-CN" target="_blank" rel="noopener">Chrome网上商店</a>,并按装RSS Feed Reader插件</p>
+<p><img src="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2F%E5%A6%82%E4%BD%95%E8%AE%A2%E9%98%85%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%8D%E8%A6%81%E8%84%B8%2F1.jpg" alt="Chrome网上商店"></p>
+<ol>
+<li><p>安装完成后会自动提示注册一个账号，按照提示注册完成登录即可。（不用注册也没关系）</p>
+<p> <img src="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2F%E5%A6%82%E4%BD%95%E8%AE%A2%E9%98%85%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%8D%E8%A6%81%E8%84%B8%2F2.jpg" alt="点击订阅"></p>
+</li>
+<li><p>完成插件安装之后，在浏览博客或者其他网站时，点击RSS订阅图标，就可以正常订阅成功。</p>
+<p> 订阅我的博客应该要按</p>
+<p> <img src="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2F%E5%A6%82%E4%BD%95%E8%AE%A2%E9%98%85%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%8D%E8%A6%81%E8%84%B8%2F4.png" alt="博客订阅入口"></p>
+</li>
+</ol>
+<p>当有文章更新的时候，就会在浏览器右上角提示,打开后就可以看到全部订阅者了</p>
+<p><img src="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2F%E5%A6%82%E4%BD%95%E8%AE%A2%E9%98%85%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%8D%E8%A6%81%E8%84%B8%2F3.png" alt="更新标志"></p>
+<hr>
+<h3 id="3-3更新（邮箱版订阅）"><a href="#3-3更新（邮箱版订阅）" class="headerlink" title="3.3更新（邮箱版订阅）"></a>3.3更新（邮箱版订阅）</h3><p>今天终于把邮箱订阅系统嵌进本博客里，纪念一下！</p>
+<p>说实话，我之前也觉得用google插件订阅文章怪麻烦的，还有很强的局限性。所以最近一直在寻找基于邮箱订阅的解决办法。期间的经历就不讲了，不然又可以编成一大记录文了。</p>
+<h5 id="订阅细节？"><a href="#订阅细节？" class="headerlink" title="订阅细节？"></a>订阅细节？</h5><p>是这样的，如果有新的博文推送，会统一在当天晚上11点（可能没那么准）发送到订阅的邮箱之中。倘若当天没有新博文推送，当晚就没有邮件。</p>
+<h5 id="如何订阅？"><a href="#如何订阅？" class="headerlink" title="如何订阅？"></a>如何订阅？</h5><p>邮箱订阅操作很简单，不像上述方法那么麻烦。在主页右上角有个订阅本站，点进去之后输入自己的邮箱就可以了。</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://trayfour34.github.io/posts/64617.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="ray">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/64617.html" class="post-title-link" itemprop="url">Ucloud----对象存储的最终选择</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-25 16:21:30" itemprop="dateCreated datePublished" datetime="2020-02-25T16:21:30+08:00">2020-02-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-26 23:54:23" itemprop="dateModified" datetime="2020-02-26T23:54:23+08:00">2020-02-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8F%91%E7%8E%B0/" itemprop="url" rel="index"><span itemprop="name">发现</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>域名申请之后的第三个星期，阿里云终于通过了我的域名审核。鉴于此前dmca服务器架设在国外，本地阅览我博客里面的音乐视频效果都不是太好。加上picgo图床存放下的图片集杂乱无章，不好整理归档。因此我想寻找一个真正能够存放托管我博客大小文件的空间。此篇记录了我解决此问题的简要经历。</p>
+<h3 id="picgo"><a href="#picgo" class="headerlink" title="picgo"></a>picgo</h3><p>博客中的文件，其实就是以图片视频音频这三类为主。在最开始的时候，为了简化操作，我将所有的文件都放在了项目根目录下，简单快捷，但对于网站的访问速度来说却是一大灾难。因此在后期优化的过程中，我开始寻找能够生成外链的公共空间。picgo+github存储是网上比较潮流的生成图片外链的方法。的确，在github平台的托管下，你可以在保证不掏腰包的状态下还能拥有无限的下载流量和无限的存储空间。而且上传下载速度也不用担心，因为在手动融合jsdelivr技术于此图床之后，就等同于拥有一个免费的cdn给你的博客加速，简直不能再好了。</p>
+<blockquote>
+<p>picgo样例：<a href="https://cdn.jsdelivr.net/gh/trayfour34/blog-photo-space/Blog_IMG/20200206020357.png" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/trayfour34/blog-photo-space/Blog_IMG/20200206020357.png</a></p>
+</blockquote>
+<h3 id="dmca"><a href="#dmca" class="headerlink" title="dmca"></a>dmca</h3><p>事实上，上面这个方法确实十分完美的解决了我80%的问题。可是picgo图床终归只是图床，github上也只能存放着我类似于png、bmp、jpg等图片类型，音乐和视频这些比较大的文件却无法存放于此。因此我想，只要再找个空间能够存放音频也就解决了。一顿知乎之后，发现dmca.gripe免费又简单，测试中流量速度也不慢。行，就它了！</p>
+<p>理论上这个问题到此为止就算完美解决了。但后来同学测试完反映情况后我才知道，原来关了vpn之后加载速度堪忧，进度条半天才向前滑一点点。因此我只能另寻出路。</p>
+<h3 id="七牛云"><a href="#七牛云" class="headerlink" title="七牛云"></a>七牛云</h3><p>之前，无论是图床还是音频空间，我主要是寻求一些比较次的免费产品，能省即省嘛<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f605.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f605.png?v8">😅</span>在dmca之后，我也尝试了<a href="https://coka.la/" target="_blank" rel="noopener">Coka.la</a>、<a href="https://streamable.com/" target="_blank" rel="noopener">Streamable</a>等，效果都不是太好。所以我转向寻求大产，寄希望于能碰上某个大产推出免费产品活动的契机（可惜没有）。腾讯云两年前还是可以白嫖的，现在似乎都没了，只推出免费六个月活动。阿里云和华为云需要长期收费。正当山重水复的时候，七牛云映入眼前，一个域名可享每日10G流量+10G存储空间+cdn加速，关键是免费啊。于是把东西都搬了过去，最后测试速度也没问题。大功告成！</p>
+<blockquote>
+<p>七牛云样例：<a href="http://q5okos5qx.bkt.clouddn.com/%E6%B8%A9%E6%9F%94.mp3" target="_blank" rel="noopener">温柔.mp3</a></p>
+</blockquote>
+<h3 id="备案风波"><a href="#备案风波" class="headerlink" title="备案风波"></a>备案风波</h3><p>但是几天之后我才发现，我忽略了一行小小的tip，如下</p>
+<img src="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2FUcloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9%2F1.png" alt="tip" style="zoom: 67%;">
+
+<p>也就是说，它给我的是一个测试域名，测试域名要回收，需要创建自定义域名才能永久使用。然而创建自定义域名要将域名备案……</p>
+<img src="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2FUcloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9%2F2.png" alt="备案域名才能使用" style="zoom: 67%;">
+
+<p>行，备案就备案吧，再等个几天也不是什么事儿。</p>
+<p>然而，当我把填写备案信息的时候我才发现，原来备案要买备案商的服务器或者虚拟主机，阿里云最便宜的也要一百多块一年….额溜了溜了。</p>
+<img src="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2FUcloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9%2F3.png" alt="备案" style="zoom: 50%;">
+
+<p>那个时候还想看看能不能白嫖到一台云主机来备案，所以从阿里云的<strong>万网虚机试用</strong>服务和aws的一年免费主机，但都显示只有转正了才能备案。这条路也断了…</p>
+<h3 id="Ucloud"><a href="#Ucloud" class="headerlink" title="Ucloud"></a>Ucloud</h3><p>最后在漫无目的的搜寻之中，我发现了青云和Ucloud两个不太出名的云服务商。Ucloud推出每个月20G的流量+20G的存储空间，完全适用于小博客的运维。而且Ucloud的客服真的是圈粉了，提交的工单总是能在很短的时间内就予以回复。在开通之前还给我通了个电话，确认我开通对象存储的要求，并嘱咐我注意流量的使用，因为流量超出是没有短信提醒的。（亲身经历，不是打广告<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">😄</span>）</p>
+<p><img src="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2FUcloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9%2F4.png" alt="(工单)"></p>
+<blockquote>
+<p>Ucloud样例：<a href="http://ray34.cn-sh2.ufileos.com/home%2F%E6%B8%A9%E6%9F%94.png" target="_blank" rel="noopener">http://ray34.cn-sh2.ufileos.com/home%2F%E6%B8%A9%E6%9F%94.png</a></p>
+</blockquote>
+<p>而且它提供一个域名多个地区服务，每个地区20G流量+20G空间。结算下来一百多G，已经是很大很大了。如果能自己实现负载均衡的话，后台就可以自己判断哪个地区的空间多，然后自动把文件放在哪里。具体的实现可以看看这篇文章   <a href="https://www.xiebruce.top/644.html" target="_blank" rel="noopener">使用nginx负载均衡+多个云的免费额度打造免费markdown图床</a>    </p>
+<p>另外，相比之下Ucloud还有一点做的很好，就是文件归档。对比七牛或者阿里云亦或是picgo图床，Ucloud可以像在本地新建文件夹命名文件夹一样，把图片视频以文件夹的形式分好。对比如下：</p>
+<p><img src="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2FUcloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9%2F5.png" alt="(七牛云)"></p>
+<p><img src="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2FUcloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9%2F6.png" alt="(picgo)"></p>
+<p><img src="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2FUcloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9%2F7.png" alt="(Ucloud)"></p>
+<h3 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h3><p>至此，这个问题终究告一段落，不会再有反转了哈哈。在这个过程中我也懂了不少东西，也并非完全浪费时间<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8">😏</span>其中还发现了阿里云的虚机试用，后续可以借此机会好好看看。</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://trayfour34.github.io/posts/20976.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="ray">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/20976.html" class="post-title-link" itemprop="url">dmca.gripe:永久托管你的小文件</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-14 09:35:30" itemprop="dateCreated datePublished" datetime="2020-02-14T09:35:30+08:00">2020-02-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-26 02:03:32" itemprop="dateModified" datetime="2020-02-26T02:03:32+08:00">2020-02-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8F%91%E7%8E%B0/" itemprop="url" rel="index"><span itemprop="name">发现</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>此篇是我严格意义上的第一篇博文。选择这个主题也是因为在后续优化博客的过程中碰到了相应的问题。故借此机会写下来分享分享。</p>
+<p>因为自己想要在博客中增添音乐和视频板块，在搭建博客的时候参考别人的博客，发现大部分人都是去通过找寻免费的音频网站，获取外链的方式将音乐地址。但这样找寻地址既麻烦，又不能保证音频地址的长期有效性。因为大多数免费音频网站的音乐地址并不是永久固定的，一旦某日链接失效就不能用了。</p>
+<p>我在搭建的时候，为了图方便，把视频和音乐事先下载好放在根目录下，然后将所有音乐和视频的url全部设置成本地地址。但在后期优化的过程中，我发现这样子做虽然确保了链接的永久有效性，但却大大影响了访问速率（一个视频的大小就相当于我其他文件的总和了）。因此，我想找一个既简单免费（毕竟为了这个需求去阿里云买空间实在不值得）、又能永久托管储存我的一些小文件的工具。而 dmca.gripe 完美符合我的需求。</p>
+<p>dmca.gripe下，每个文件的最大上传大小是 5120MB，有账户机制，创建一个账户后便有一个属于你自己的云空间。经测试，上传下载速度都不成问题。任何文件都可以上传。因为博客中的图片，音乐，视频都需要外链，所以我以以上三种文件类型进行测试。</p>
+<p><a href="https://dmca.gripe/" target="_blank" rel="noopener">点击进入dema.gripe</a></p>
+<hr>
+<h3 id="图片外链测试"><a href="#图片外链测试" class="headerlink" title="图片外链测试"></a>图片外链测试</h3><p><img src="https://share.dmca.gripe/yz94A9s1yL956wBr.jpg" alt="img"></p>
+<pre><code>https://share.dmca.gripe/yz94A9s1yL956wBr.jpg</code></pre><h3 id="视频外链测试"><a href="#视频外链测试" class="headerlink" title="视频外链测试"></a>视频外链测试</h3><p><video playsinline="" webkit-playsinline="" preload="auto" controls="" src="https://share.dmca.gripe/o0svzfA3yJtXnrMI.mp4" width="100%">视频由ray分享，如果您看到这段话说明视频已经失效.</video></p>
+<pre><code>https://share.dmca.gripe/o0svzfA3yJtXnrMI.mp4</code></pre><h3 id="音乐外链测试"><a href="#音乐外链测试" class="headerlink" title="音乐外链测试"></a>音乐外链测试</h3><audio controls="controls">
+  <source src="https://share.dmca.gripe/pGyp6q8ii3EDZ4ZI.mp3" type="audio/ogg">
+<embed height="100" width="100" src="/i/song.mp3">
+</audio>
+
+<pre><code>https://share.dmca.gripe/pGyp6q8ii3EDZ4ZI.mp3</code></pre><h3 id="文件下载测试"><a href="#文件下载测试" class="headerlink" title="文件下载测试"></a>文件下载测试</h3><h5 id="花海-mp3"><a href="#花海-mp3" class="headerlink" title="花海.mp3"></a><a href="https://share.dmca.gripe/pGyp6q8ii3EDZ4ZI.mp3" target="_blank" rel="noopener">花海.mp3</a></h5><h5 id=""><a href="#" class="headerlink" title=""></a></h5><hr>
+<h5 id="2月22日更新："><a href="#2月22日更新：" class="headerlink" title="2月22日更新："></a>2月22日更新：</h5><h6 id="由于该网站的服务器架设在国外，所以没有挂vpn的话速度会有点慢。（之前测试一直是挂着vpn-smile-）"><a href="#由于该网站的服务器架设在国外，所以没有挂vpn的话速度会有点慢。（之前测试一直是挂着vpn-smile-）" class="headerlink" title="由于该网站的服务器架设在国外，所以没有挂vpn的话速度会有点慢。（之前测试一直是挂着vpn:smile:）"></a>由于该网站的服务器架设在国外，所以没有挂vpn的话速度会有点慢。（之前测试一直是挂着vpn<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">😄</span>）</h6><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://trayfour34.github.io/posts/16107.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="ray">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/16107.html" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-03 05:56:51" itemprop="dateCreated datePublished" datetime="2020-02-03T05:56:51+08:00">2020-02-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-26 21:52:23" itemprop="dateModified" datetime="2020-02-26T21:52:23+08:00">2020-02-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is my very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start-smile-smile-smile-smile"><a href="#Quick-Start-smile-smile-smile-smile" class="headerlink" title="Quick Start :smile: :smile::smile: :smile:"></a>Quick Start :smile: :smile::smile: :smile:</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
+<span class="token operator">&lt;</span>div class<span class="token operator">=</span><span class="token string">"statis"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>span class<span class="token operator">=</span><span class="token string">"count"</span><span class="token operator">></span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"&lt;%- url_for('/categories') %>"</span> target<span class="token operator">=</span><span class="token string">"_blank"</span><span class="token operator">></span><span class="token operator">&lt;</span>%- site.categories.length %<span class="token operator">></span><span class="token operator">&lt;</span>/a<span class="token operator">></span><span class="token operator">&lt;</span>/span<span class="token operator">></span>
+    <span class="token operator">&lt;</span>span class<span class="token operator">=</span><span class="token string">"name"</span><span class="token operator">></span><span class="token operator">&lt;</span>%- __<span class="token punctuation">(</span><span class="token string">'categories'</span><span class="token punctuation">)</span> %<span class="token operator">></span><span class="token operator">&lt;</span>/span<span class="token operator">></span>
+<span class="token operator">&lt;</span>/div<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
 
 
-    <!-- Baidu Analytics -->
+  
 
-    <!-- Baidu Push -->
+
+
+          </div>
+          
 
 <script>
-    (function () {
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        } else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
 
-    
-    <script src="/libs/others/clicklove.js" async="async"></script>
-    
-    
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-    
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
 
-    
-        <script src="//code.tidio.co/quw7chpahakshvyuv5u18ljotnfjxop0.js"></script>
-        <script> 
-            $(document).ready(function () {
-                setInterval(change_Tidio, 50);  
-                function change_Tidio() { 
-                    var tidio=$("#tidio-chat iframe");
-                    if(tidio.css("display")=="block"&& $(window).width()>977 ){
-                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"85px":"20px";   
-                        document.getElementById("tidio-chat-iframe").style.right="-15px";   
-                        document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
-                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
-                    } 
-                    else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
-                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;   
-                        document.getElementById("tidio-chat-iframe").style.right="-15px"; 
-                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
-                    }
-                    else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
-                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;   
-                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
-                    }
-                    if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
-                        document.getElementById("tidio-chat-iframe").style.zIndex="998";
-                    }
-                } 
-            }); 
-        </script>
-    
+  <aside class="sidebar">
+    <div class="sidebar-inner">
 
-    
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-    
-    <script type="text/javascript" color="0,0,0"
-        pointColor="0,0,255" opacity='0.7'
-        zIndex="-1" count="100"
-        src="/libs/background/canvas-nest.js"></script>
-    
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
 
-    
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ray"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">ray</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
 
-    
-    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
-    
-    
-    
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
-    
+
+
+      </div>
+
+      
+        <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+        <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+        <div class="widget-wrap">
+        <h3 class="widget-title">Tag Cloud</h3>
+              <div id="myCanvasContainer" class="widget tagcloud">
+                    <canvas width="250" height="250" id="resCanvas" style="width=100%">
+                       <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Rss/" rel="tag">Rss</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ucloud/" rel="tag">Ucloud</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gripe/" rel="tag">gripe</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/picgo/" rel="tag">picgo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%83%E7%89%9B/" rel="tag">七牛</a><span class="tag-list-count">1</span></li></ul>
+                    </canvas>
+              </div>
+        </div>
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ray</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+  
+  
+
+  
+
 
 </body>
-
-<script type="text/javascript">
-    //只在桌面版网页启用特效
-    var windowWidth = $(window).width();
-    if (windowWidth > 768) {
-        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
-    }
-</script>
-
-<script type="text/javascript">
-    window.onload = function(){
-        //屏蔽键盘事件
-        document.onkeydown = function (){
-            var e = window.event || arguments[0];
-            //F12
-            if(e.keyCode == 123){
-                return false;
-            //Ctrl+Shift+I
-            }else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)){
-                return false;
-            //Shift+F10
-            }else if((e.shiftKey) && (e.keyCode == 121)){
-                return false;
-            //Ctrl+U
-            }else if((e.ctrlKey) && (e.keyCode == 85)){
-                return false;
-            }
-        };
-        //屏蔽鼠标右键
-        document.oncontextmenu = function (){
-            return false;
-        }
-    }
-</script>
-
-
 </html>
+
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
+
+
+
+
+
+
+
+
