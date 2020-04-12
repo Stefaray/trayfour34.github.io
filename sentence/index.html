@@ -1,34 +1,149 @@
-extends includes/layout.pug
-
-block content
-  if page.type === 'tags'
-    .tag-cloud
-      .tag-cloud__title= _p('page.tag')
-        |  - 
-        span.tag-cloud__amount= site.tags.length
-      - var start_color = theme.theme_color ? (theme.theme_color.tag_start_color || '#A4D8FA'): '#A4D8FA'
-      - var end_color = theme.theme_color ? (theme.theme_color.tag_end_color || '#1B9EF3') : '#1B9EF3'
-      .tag-cloud-tags!= tagcloud({min_font: 12, max_font: 30, amount: 200, color: true, start_color, end_color})
-    if page.comments !== false
-      include includes/comments/index.pug
-  else if page.type === 'categories'
-    #post-content
-      .category-lists
-        .category__title= _p('page.category')
-          |  - 
-          span.category__amount= site.categories.length
-        div!= list_categories()
-    if page.comments !== false
-      include includes/comments/index.pug
-  else if page.type === 'slides'
-    include ./includes/mixins/slide.pug
-    +slideArticle()
-    if page.comments !== false
-      include includes/comments/index.pug
-  else
-    article#page
-      h1= page.title
-      .article-container!= page.content
-    include includes/pagination.pug
-    if page.comments !== false
-      include includes/comments/index.pug
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="一句"><meta name="keywords" content=""><meta name="author" content="ray"><meta name="copyright" content="ray"><title>一句 | </title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="false"><div class="author-info"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">ray</div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">4</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">7</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">2</span></a></div></div></div><nav class="no-bg" id="nav"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/"></a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span><span class="pull-right"></span></div><div id="site-info"><div id="site-title"></div><div id="site-sub-title">时间之间</div></div></nav><div id="content-outer"><div class="layout" id="content-inner"><article id="page"><h1>一句</h1><div class="article-container"><h3 id="📅四月"><a href="#📅四月" class="headerlink" title="📅四月"></a>📅四月</h3><h4 id="4-11"><a href="#4-11" class="headerlink" title="4.11"></a>4.11</h4><blockquote>
+<p> 梦醒人间看微雨，江山还似旧温柔。</p>
+</blockquote>
+<h4 id="4-9"><a href="#4-9" class="headerlink" title="4.9"></a>4.9</h4><blockquote>
+<p> No one can give you a peace of mind. You have to find calm in your heart and give it to yourself!</p>
+</blockquote>
+<h4 id="4-8"><a href="#4-8" class="headerlink" title="4.8"></a>4.8</h4><blockquote>
+<p>重要的是，迈出第一步后的体会。</p>
+</blockquote>
+<h3 id="📅三月"><a href="#📅三月" class="headerlink" title="📅三月"></a>📅三月</h3><h4 id="3-31"><a href="#3-31" class="headerlink" title="3.31"></a>3.31</h4><blockquote>
+<p>“有形的生命的确非常脆弱，但是无形的力量，就会坚不可破。”</p>
+</blockquote>
+<h4 id="3-30"><a href="#3-30" class="headerlink" title="3.30"></a>3.30</h4><blockquote>
+<p>我不知道后来大家都发生了什么，但我们现在所做的，至少不要让年少的自己失望。</p>
+</blockquote>
+<h4 id="3-29"><a href="#3-29" class="headerlink" title="3.29"></a>3.29</h4><blockquote>
+<p>“聚沙可以成塔，如果散落尘世，只会被风带走。”<br><img src="http://ray34.cn-sh2.ufileos.com/%E4%B8%80%E5%8F%A5%2F3.29.jpg" alt="3.29"></p>
+</blockquote>
+<h4 id="3-28"><a href="#3-28" class="headerlink" title="3.28"></a>3.28</h4><blockquote>
+<p>靠时间靠精力积攒而成的东西，才会格外的珍惜</p>
+</blockquote>
+<h4 id="3-27"><a href="#3-27" class="headerlink" title="3.27"></a>3.27</h4><blockquote>
+<p>心中所想的一切，都应该通透澄澈。</p>
+</blockquote>
+<h4 id="3-26"><a href="#3-26" class="headerlink" title="3.26"></a>3.26</h4><blockquote>
+<p>每次看着别人干货满满的博客，想到我千年未更的博客就惭愧。</p>
+</blockquote>
+<h4 id="3-25"><a href="#3-25" class="headerlink" title="3.25"></a>3.25</h4><blockquote>
+<p>又是毫无作为的一天。</p>
+</blockquote>
+<h4 id="3-24"><a href="#3-24" class="headerlink" title="3.24"></a>3.24</h4><blockquote>
+<p>“而且人生是会有很多改变的，以前很执着要的一些东西，将就了，反而会感谢当年的决定。”</p>
+</blockquote>
+<h4 id="3-21"><a href="#3-21" class="headerlink" title="3.21"></a>3.21</h4><blockquote>
+<p>“望天上云卷云舒，去留无意，<br>  看庭前花开花落，宠辱不惊。”</p>
+</blockquote>
+<h4 id="3-20"><a href="#3-20" class="headerlink" title="3.20"></a>3.20</h4><blockquote>
+<p>“Don’t aim for success if you really want it. Just stick to what you love and believe in,and it will come naturally.”</p>
+</blockquote>
+<h4 id="3-19"><a href="#3-19" class="headerlink" title="3.19"></a>3.19</h4><blockquote>
+<p>Forever Ray<br>冲动与否，你总需要去寻找最真实的自己</p>
+</blockquote>
+<h4 id="3-18"><a href="#3-18" class="headerlink" title="3.18"></a>3.18</h4><blockquote>
+<p>今天的电脑随机壁纸直戳我心<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f613.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f613.png?v8">😓</span><br><img src="http://ray34.cn-sh2.ufileos.com/%E4%B8%80%E5%8F%A5%2F3.18.jpg" alt="3.18"></p>
+</blockquote>
+<h4 id="3-17"><a href="#3-17" class="headerlink" title="3.17"></a>3.17</h4><blockquote>
+<p>重看了一遍Java核心，感觉对一些东西有了更深的理解。<br>立志本周把进阶篇看完。</p>
+</blockquote>
+<h4 id="3-15"><a href="#3-15" class="headerlink" title="3.15"></a>3.15</h4><blockquote>
+<p>不知道以后还有多少如今天这般的机会和时间，还能陪您走过棉城不知名的荒废小巷。</p>
+</blockquote>
+<h4 id="3-14"><a href="#3-14" class="headerlink" title="3.14"></a>3.14</h4><blockquote>
+<p>“When the world shifts underneath you, you must shift with it. It’s not the strongest or the smartest that survive, it is the one who is most willing to adapt.”</p>
+<p><img src="http://ray34.cn-sh2.ufileos.com/%E4%B8%80%E5%8F%A5%2F3.14.png" alt="3.14"></p>
+</blockquote>
+<h4 id="3-13"><a href="#3-13" class="headerlink" title="3.13"></a>3.13</h4><blockquote>
+<p>把时间花在正确的人和事身上。</p>
+</blockquote>
+<h4 id="3-12"><a href="#3-12" class="headerlink" title="3.12"></a>3.12</h4><blockquote>
+<p>这个世界每天都在离别，只是我还学不会从容告别。</p>
+<p><img src="http://ray34.cn-sh2.ufileos.com/%E4%B8%80%E5%8F%A5%2F3.12.jpg" alt="3.12"></p>
+</blockquote>
+<h4 id="3-11"><a href="#3-11" class="headerlink" title="3.11"></a>3.11</h4><blockquote>
+<p>以后不用背重重的电脑电源适配器到处跑了<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">😄</span></p>
+<p><img src="http://ray34.cn-sh2.ufileos.com/%E4%B8%80%E5%8F%A5%2F3.11.jpg" alt="3.11"></p>
+</blockquote>
+<h4 id="3-10"><a href="#3-10" class="headerlink" title="3.10"></a>3.10</h4><blockquote>
+<p>“年轻人，你职责是平整土地，而非焦虑时光。你做三四月的事，在八九月自有答案。”</p>
+<p><img src="http://ray34.cn-sh2.ufileos.com/%E4%B8%80%E5%8F%A5%2F3.10.jpg" alt="3.10"></p>
+</blockquote>
+<h4 id="3-9"><a href="#3-9" class="headerlink" title="3.9"></a>3.9</h4><blockquote>
+<p>开学快乐！</p>
+</blockquote>
+<h4 id="3-8"><a href="#3-8" class="headerlink" title="3.8"></a>3.8</h4><blockquote>
+<p>做最真实的自己，<br>即便这个世界未能如我所愿。</p>
+</blockquote>
+<h4 id="3-7"><a href="#3-7" class="headerlink" title="3.7"></a>3.7</h4><blockquote>
+<p>七年了，湖人终于闯进季后赛。<br>可当年带领这支球队的你，却再也看不见了。</p>
+</blockquote>
+<h4 id="3-6"><a href="#3-6" class="headerlink" title="3.6"></a>3.6</h4><blockquote>
+<p>“水花只能开在雨天</p>
+<p> 烟花要绽放在黑暗”</p>
+</blockquote>
+<h4 id="3-5"><a href="#3-5" class="headerlink" title="3.5"></a>3.5</h4><blockquote>
+<p>想找条转lightning转安卓转typec（65w快充）的一拖三的线，可惜没有。<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f622.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f622.png?v8">😢</span></p>
+</blockquote>
+<h4 id="3-4"><a href="#3-4" class="headerlink" title="3.4"></a>3.4</h4><blockquote>
+<p>“且视他人疑目如盏盏鬼火，也要大胆去走属于你的夜路。”</p>
+</blockquote>
+<h4 id="3-3"><a href="#3-3" class="headerlink" title="3.3"></a>3.3</h4><blockquote>
+<p>怀念还是一样的怀念，</p>
+<p>但我们终究要拥抱新生活。</p>
+</blockquote>
+<h4 id="3-2"><a href="#3-2" class="headerlink" title="3.2"></a>3.2</h4><blockquote>
+<p>But until the gates are open，<br>I just wanna feel this moment.</p>
+</blockquote>
+<h4 id="3-1"><a href="#3-1" class="headerlink" title="3.1"></a>3.1</h4><blockquote>
+<p>所以暂时将你眼睛闭了起来。</p>
+</blockquote>
+<h3 id="📅二月"><a href="#📅二月" class="headerlink" title="📅二月"></a>📅二月</h3><h4 id="2-29"><a href="#2-29" class="headerlink" title="2.29"></a>2.29</h4><blockquote>
+<p>好久不见，二月二九。</p>
+</blockquote>
+<h4 id="2-28"><a href="#2-28" class="headerlink" title="2.28"></a>2.28</h4><blockquote>
+<p>所以失去也没什么不好，你永远不知道上天下一刻会给你安排什么惊喜。</p>
+</blockquote>
+<h4 id="2-27"><a href="#2-27" class="headerlink" title="2.27"></a>2.27</h4><blockquote>
+<p>和弟弟找了一个下午的球场，最后终于相信了疫情期间棉城无球场的事实。</p>
+<p><img src="http://ray34.cn-sh2.ufileos.com/%E4%B8%80%E5%8F%A5%2F2.27.jpg" alt="2.27"></p>
+</blockquote>
+<h4 id="2-26"><a href="#2-26" class="headerlink" title="2.26"></a>2.26</h4><blockquote>
+<p>所有的事物都是谜团，而解开一个谜的钥匙……是另一个谜。</p>
+</blockquote>
+<h4 id="2-25"><a href="#2-25" class="headerlink" title="2.25"></a>2.25</h4><blockquote>
+<p>💐𝑹.𝑰.𝑷. 𝑲𝒐𝒃𝒆 &amp; 𝑮𝒊𝒈𝒊 💐<br>&nbsp; &nbsp; &nbsp; 💜𝑴𝒂𝒎𝒃𝒂 24⁸💛 </p>
+</blockquote>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div></article><nav id="pagination"><div class="pagination"></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2020 By ray</div><div class="framework-info"><span>Driven - </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span><span></span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
