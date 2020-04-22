@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://trayfour34.github.io/"/>
-  <updated>2020-04-22T11:31:06.942Z</updated>
+  <updated>2020-04-22T11:32:43.163Z</updated>
   <id>https://trayfour34.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World4</title>
+    <link href="https://trayfour34.github.io/posts/16100.html"/>
+    <id>https://trayfour34.github.io/posts/16100.html</id>
+    <published>2020-04-22T11:32:35.060Z</published>
+    <updated>2020-04-22T11:32:43.163Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is my very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="https://trayfour34.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="hexo" scheme="https://trayfour34.github.io/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World3</title>
