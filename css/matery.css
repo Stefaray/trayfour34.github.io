@@ -54,6 +54,14 @@ body {
 
 }
 
+.img-3 {
+    width: 33.3%;
+    display: inline-block; 
+    margin-bottom: -6px;
+    background: white; 
+    border: none; 
+    }
+
 
 h1 {
     margin: 48px 0 22px -5px;
