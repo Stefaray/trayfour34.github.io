@@ -29,31 +29,6 @@
     
     
     <entry>
-      <title>许久许久没有更博了...</title>
-      <link href="/posts/20459.html"/>
-      <url>/posts/20459.html</url>
-      
-        <content type="html"><![CDATA[<p>很无聊的计算了一下，距离我上一次更博的日子已经有115天了。想起了当初博客建立起来的时候，立志一天一更的画面，再看看现在……</p><h5 id=""><a href="#" class="headerlink" title=""></a><img src="C:/Users/lenovo/Desktop/image-20200626182638452.png" alt="我的更博速度"></h5><p>╮(╯▽╰)╭</p><p>期间也不是没有要写文章的意思，但素有拖延症本症的我总是有各种理由搪塞过去，例如但不限于最近好忙再等等、粗制滥造零容忍、惊世大篇要酝酿、无人问津无所谓……直到感觉不好意思继续拖下去的时候，才开始转过头来回顾，这些天里，我到底在干什么？</p><p>由于这场突如其来的疫情，我一直处于闲赋在家的状态，但是偶尔偶尔还是会出去见一见冠冠，看一看婆婆，亦或是跟着朋友去happy。日子一天天过去，我有时候甚至会感觉，能有一个学期感受在家学习上课的机会，其实特别特别好。以后再也很难有机会跟家人相处这么长的时间，待到踏入社会工作之际，朋友之间的见面也不会有现在那么频繁，人呐，总是要慢慢孤独下去的。因此，我十分享受这段因为疫情被迫在家的生活。</p><p>要问在这段日子里有没有让我感到特别快乐的瞬间，大抵是在二月的时候建了这个属于自己的独立网站空间吧。感觉自己的心在偌大的网络世界里有了一块安身之地，也十分满意这个博客的整体设计，直到四个月后的现在来看，也觉得自己当初的设计特别到位（自夸一下，别再骂辣^_^）</p><p>三个月前买了一个ipad也让我激动了一阵子，</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      <categories>
-          
-          <category> 随笔 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 流水账 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Ucloud----对象存储的最终选择</title>
       <link href="/posts/64617.html"/>
       <url>/posts/64617.html</url>
