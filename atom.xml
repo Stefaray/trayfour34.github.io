@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://trayfour34.github.io/"/>
-  <updated>2020-06-27T16:04:03.615Z</updated>
+  <updated>2020-09-19T17:33:19.051Z</updated>
   <id>https://trayfour34.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法1.数组中重复的数字</title>
+    <link href="https://trayfour34.github.io/posts/60994.html"/>
+    <id>https://trayfour34.github.io/posts/60994.html</id>
+    <published>2020-09-19T16:32:03.913Z</published>
+    <updated>2020-09-19T17:33:19.051Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h4&gt;&lt;p&gt;在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1
+        
+      
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="https://trayfour34.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="https://trayfour34.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>许久许久没有更博了...</title>
@@ -109,7 +136,7 @@
     <link href="https://trayfour34.github.io/posts/16107.html"/>
     <id>https://trayfour34.github.io/posts/16107.html</id>
     <published>2020-02-23T08:21:30.000Z</published>
-    <updated>2020-06-27T04:03:14.908Z</updated>
+    <updated>2020-06-28T06:59:06.021Z</updated>
     
     <summary type="html">
     
