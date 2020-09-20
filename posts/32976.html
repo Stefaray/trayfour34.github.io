@@ -727,7 +727,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。请找出数组中任意一个重复的数字。</p>
+                <h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>在一个长度为 <code>n</code> 的数组 <code>nums</code> 里的所有数字都在 0～<code>n-1</code> 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。请找出数组中任意一个重复的数字。</p>
 <p><strong>示例 1：</strong></p>
 <pre class="line-numbers language-text"><code class="language-text">输入：
 [2, 3, 1, 0, 2, 5, 3]
@@ -756,12 +756,12 @@
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>解法分析</strong></p>
-<p>主要思路在于将数组index和相应的value对应起来。在while循环体内，每个值至多通过两次（多数是一次）交换，规划到相应的位置。因此时间复杂度为$O(N)$</p>
+<p>主要思路在于将数组<code>index</code>和相应的<code>value</code>对应起来。在<code>while</code>循环体内，每个值至多通过两次（多数是一次）交换，规划到相应的位置。因此时间复杂度为$O(N)$</p>
 <p><strong>解法注意点</strong></p>
 <ul>
-<li>while循环的复杂度需要均摊分析</li>
+<li><code>while</code>循环的复杂度需要均摊分析</li>
 <li>如果要求不改变原数组，则此方法无效</li>
-<li>如果题目没有规定 「所有数字都在 0～n-1 的范围内」，则此方法无效。（考虑数组空间）</li>
+<li>如果题目没有规定 「所有数字都在 0～<code>n-1</code> 的范围内」，则此方法无效。（考虑数组空间）</li>
 <li>做题的时候，需要考虑时间复杂度、空间复杂度、是否可以改变原数组等。</li>
 </ul>
 <h5 id="方法二：Hash映射法"><a href="#方法二：Hash映射法" class="headerlink" title="方法二：Hash映射法"></a>方法二：Hash映射法</h5><blockquote>
@@ -783,7 +783,7 @@
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>解法分析</strong></p>
-<p>通过map映射，将数字逐个放到hash表里，若某个数之前hash没有，则值true；若某个数之前hash存在，即映射过程中发现值为true，则可以判断重复。</p>
+<p>通过<code>map</code>映射，将数字逐个放到<code>hash</code>表里，若某个数之前<code>hash</code>没有，则值<code>true</code>；若某个数之前<code>hash</code>存在，即映射过程中发现值为<code>true</code>，则可以判断重复。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {

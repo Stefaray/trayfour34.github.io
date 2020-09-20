@@ -766,7 +766,7 @@
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>解法分析</strong></p>
-<p>如下图所示，我们将矩阵逆时针旋转 45° ，并将其转化为图形式，发现其类似于 二叉搜索树 ，即对于每个元素，其左分支元素更小、右分支元素更大。因此，通过从 “根节点” 开始搜索，遇到比 target 大的元素就向左，反之向右，即可找到目标值 target 。</p>
+<p>如下图所示，我们将矩阵逆时针旋转 45° ，并将其转化为图形式，发现其类似于 二叉搜索树 ，即对于每个元素，其左分支元素更小、右分支元素更大。因此，通过从 “根节点” 开始搜索，遇到比 <code>target</code> 大的元素就向左，反之向右，即可找到目标值 <code>target</code> 。</p>
 <p><img src="https://raw.githubusercontent.com/trayfour34/Picture_Bed/master/20200920143519.png" alt="image-20200920143519269"></p>
 <h5 id="方法二：线性查找"><a href="#方法二：线性查找" class="headerlink" title="方法二：线性查找"></a>方法二：线性查找</h5><blockquote>
 <p>时间复杂度：$O(N+M)$</p>
@@ -795,19 +795,19 @@
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>解法分析</strong></p>
-<p>从二维数组的右上角开始查找。如果当前元素等于目标值，则返回 true。如果当前元素大于目标值，则移到左边一列。如果当前元素小于目标值，则移到下边一行。</p>
+<p>从二维数组的右上角开始查找。如果当前元素等于目标值，则返回 <code>true</code>。如果当前元素大于目标值，则移到左边一列。如果当前元素小于目标值，则移到下边一行。</p>
 <p>可以证明这种方法不会错过目标值。如果当前元素大于目标值，说明当前元素的下边的所有元素都一定大于目标值，因此往下查找不可能找到目标值，往左查找可能找到目标值。如果当前元素小于目标值，说明当前元素的左边的所有元素都一定小于目标值，因此往左查找不可能找到目标值，往下查找可能找到目标值。</p>
 <ul>
-<li>若数组为空，返回 false</li>
+<li>若数组为空，返回 <code>false</code></li>
 <li>初始化行下标为 0，列下标为二维数组的列数减 1</li>
 <li>重复下列步骤，直到行下标或列下标超出边界<ul>
-<li>获得当前下标位置的元素 num</li>
-<li>如果 num 和 target 相等，返回 true</li>
-<li>如果 num 大于 target，列下标减 1</li>
-<li>如果 num 小于 target，行下标加 1</li>
+<li>获得当前下标位置的元素 <code>num</code></li>
+<li>如果 <code>num</code> 和 <code>target</code> 相等，返回 <code>true</code></li>
+<li>如果 <code>num</code> 大于 <code>target</code>，列下标减 1</li>
+<li>如果 <code>num</code> 小于 <code>target</code>，行下标加 1</li>
 </ul>
 </li>
-<li>循环体执行完毕仍未找到元素等于 target ，说明不存在这样的元素，返回 false</li>
+<li>循环体执行完毕仍未找到元素等于 <code>target</code> ，说明不存在这样的元素，返回 <code>false</code></li>
 </ul>
 <script>
         document.querySelectorAll('.github-emoji')
