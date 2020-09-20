@@ -4,8 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, ">
-    <meta name="description" content="Welcome to Hexo! This is my very first post. Check documentation for more info. If you get any problems when using Hexo,">
+    <meta name="keywords" content="算法4.前序中序重建二叉树, ">
+    <meta name="description" content="题目描述输入某二叉树的前序遍历和中序遍历的结果，请重建该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。
+示例 1：
+给出
+前序遍历 preorder = [3,9,20,15,7]
+中序遍历 inorder = [9,3,1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hello World | </title>
+    <title>算法4.前序中序重建二叉树 | </title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -545,12 +549,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/25.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">算法4.前序中序重建二叉树</h1>
                 </div>
             </div>
         </div>
@@ -667,8 +671,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
+                            <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
+                                <span class="chip bg-color">二叉树</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%80%92%E5%BD%92/">
+                                <span class="chip bg-color">递归</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%A0%86%E6%A0%88/">
+                                <span class="chip bg-color">堆栈</span>
                             </a>
                         
                     </div>
@@ -679,8 +691,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
-                                随笔
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                算法
                             </a>
                         
                     </div>
@@ -692,21 +704,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-23
+                    2020-09-20
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-06-28
+                    2020-09-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    130
+                    1.1k
                 </div>
                 
 
@@ -724,23 +736,128 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is my very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start-smile-smile-smile-smile"><a href="#Quick-Start-smile-smile-smile-smile" class="headerlink" title="Quick Start :smile: :smile::smile: :smile:"></a>Quick Start :smile: :smile::smile: :smile:</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-lang-bash"><code class="language-lang-bash">$ hexo new "My New Post"
-<div class="statis">
-    <span class="count"><a href="<%- url_for('/categories') %>" target="_blank"><%- site.categories.length %></a></span>
-    <span class="name"><%- __('categories') %></span>
-</div>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-lang-bash"><code class="language-lang-bash">$ hexo server
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-lang-bash"><code class="language-lang-bash">$ hexo generate
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-lang-bash"><code class="language-lang-bash">$ hexo deploy
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>输入某二叉树的前序遍历和中序遍历的结果，请重建该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。</p>
+<p><strong>示例 1：</strong></p>
+<pre class="line-numbers language-text"><code class="language-text">给出
+前序遍历 preorder = [3,9,20,15,7]
+中序遍历 inorder = [9,3,15,20,7]
+
+返回如下的二叉树：
+    3
+   / \
+  9  20
+    /  \
+   15   7
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h4><h5 id="方法一：使用栈解决"><a href="#方法一：使用栈解决" class="headerlink" title="方法一：使用栈解决"></a>方法一：使用栈解决</h5><blockquote>
+<p>时间复杂度：$O(N)$    前序遍历和后序遍历都被遍历。</p>
+<p>空间复杂度：$O(N)$      额外使用栈存储已经遍历过的节点。</p>
+</blockquote>
+<p><strong>代码如下</strong></p>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    map<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">></span> map_inorder<span class="token punctuation">;</span>
+    TreeNode<span class="token operator">*</span> <span class="token function">buildTree</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">&amp;</span> preorder<span class="token punctuation">,</span> vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">&amp;</span> inorder<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 前序：[3,9,20,15,7]</span>
+        <span class="token comment" spellcheck="true">// 中序：[9,3,15,20,7]</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>inorder<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>inorder<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            map_inorder<span class="token punctuation">[</span>inorder<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        TreeNode<span class="token operator">*</span> root <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">TreeNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> part_root <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> right <span class="token operator">=</span> inorder<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        root <span class="token operator">=</span> <span class="token function">recure</span><span class="token punctuation">(</span>part_root<span class="token punctuation">,</span>left<span class="token punctuation">,</span>right<span class="token punctuation">,</span>preorder<span class="token punctuation">,</span>inorder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// cout&lt;&lt;root->val&lt;&lt;endl;</span>
+        <span class="token keyword">return</span> root<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    TreeNode<span class="token operator">*</span> <span class="token function">recure</span><span class="token punctuation">(</span><span class="token keyword">int</span> part_root<span class="token punctuation">,</span><span class="token keyword">int</span> left<span class="token punctuation">,</span><span class="token keyword">int</span> right<span class="token punctuation">,</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">&amp;</span> preorder<span class="token punctuation">,</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">&amp;</span> inorder<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>left<span class="token operator">></span>right<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> mid <span class="token operator">=</span> map_inorder<span class="token punctuation">[</span>preorder<span class="token punctuation">[</span>part_root<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// cout&lt;&lt;mid&lt;&lt;endl;</span>
+        TreeNode<span class="token operator">*</span> root <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">TreeNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        root<span class="token operator">-</span><span class="token operator">></span>val <span class="token operator">=</span> preorder<span class="token punctuation">[</span>part_root<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        root<span class="token operator">-</span><span class="token operator">></span>left <span class="token operator">=</span> <span class="token function">recure</span><span class="token punctuation">(</span>part_root<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>left<span class="token punctuation">,</span>mid<span class="token number">-1</span><span class="token punctuation">,</span>preorder<span class="token punctuation">,</span>inorder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        root<span class="token operator">-</span><span class="token operator">></span>right <span class="token operator">=</span> <span class="token function">recure</span><span class="token punctuation">(</span>part_root<span class="token operator">+</span><span class="token number">1</span><span class="token operator">+</span>mid<span class="token operator">-</span>left<span class="token punctuation">,</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>right<span class="token punctuation">,</span>preorder<span class="token punctuation">,</span>inorder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> root<span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>解法分析</strong></p>
+<p>如果使用栈来解决首先要搞懂一个知识点，就是前序遍历挨着的两个值比如m和n，他们会有下面两种情况之一的关系。</p>
+<ol>
+<li>n是m左子树节点的值。</li>
+<li>n是m右子树节点的值或者是m某个祖先节点的右节点的值。</li>
+</ol>
+<p><strong>解法注意点</strong></p>
+<ul>
+<li>根据中序队列首元素，遍历前序队列，不相等则入栈，并一直找到左子树。</li>
+<li>若相等，则开始出栈，前进中序队列index，相等则不断出栈。</li>
+<li>当有不相等，则说明该节点是父节点，将前序队列下一个节点放到这个节点的右子树上</li>
+</ul>
+<h5 id="方法二：递归"><a href="#方法二：递归" class="headerlink" title="方法二：递归"></a>方法二：递归</h5><blockquote>
+<p>时间复杂度：$O(N)$</p>
+<p>空间复杂度：$O(N)$</p>
+</blockquote>
+<p><strong>代码如下</strong></p>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    map<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">></span> map_inorder<span class="token punctuation">;</span>
+    TreeNode<span class="token operator">*</span> <span class="token function">buildTree</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">&amp;</span> preorder<span class="token punctuation">,</span> vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">&amp;</span> inorder<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 前序：[3,9,20,15,7]</span>
+        <span class="token comment" spellcheck="true">// 中序：[9,3,15,20,7]</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>inorder<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>inorder<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            map_inorder<span class="token punctuation">[</span>inorder<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        TreeNode<span class="token operator">*</span> root <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">TreeNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> part_root <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> right <span class="token operator">=</span> inorder<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        root <span class="token operator">=</span> <span class="token function">recure</span><span class="token punctuation">(</span>part_root<span class="token punctuation">,</span>left<span class="token punctuation">,</span>right<span class="token punctuation">,</span>preorder<span class="token punctuation">,</span>inorder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// cout&lt;&lt;root->val&lt;&lt;endl;</span>
+        <span class="token keyword">return</span> root<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    TreeNode<span class="token operator">*</span> <span class="token function">recure</span><span class="token punctuation">(</span><span class="token keyword">int</span> part_root<span class="token punctuation">,</span><span class="token keyword">int</span> left<span class="token punctuation">,</span><span class="token keyword">int</span> right<span class="token punctuation">,</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">&amp;</span> preorder<span class="token punctuation">,</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">&amp;</span> inorder<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>left<span class="token operator">></span>right<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> mid <span class="token operator">=</span> map_inorder<span class="token punctuation">[</span>preorder<span class="token punctuation">[</span>part_root<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// cout&lt;&lt;mid&lt;&lt;endl;</span>
+        TreeNode<span class="token operator">*</span> root <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">TreeNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        root<span class="token operator">-</span><span class="token operator">></span>val <span class="token operator">=</span> preorder<span class="token punctuation">[</span>part_root<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        root<span class="token operator">-</span><span class="token operator">></span>left <span class="token operator">=</span> <span class="token function">recure</span><span class="token punctuation">(</span>part_root<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>left<span class="token punctuation">,</span>mid<span class="token number">-1</span><span class="token punctuation">,</span>preorder<span class="token punctuation">,</span>inorder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        root<span class="token operator">-</span><span class="token operator">></span>right <span class="token operator">=</span> <span class="token function">recure</span><span class="token punctuation">(</span>part_root<span class="token operator">+</span><span class="token number">1</span><span class="token operator">+</span>mid<span class="token operator">-</span>left<span class="token punctuation">,</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>right<span class="token punctuation">,</span>preorder<span class="token punctuation">,</span>inorder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> root<span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>解法分析</strong></p>
+<ul>
+<li>递推参数： 前序遍历中根节点的索引pre_root、中序遍历左边界in_left、中序遍历右边界in_right。</li>
+<li>终止条件： 当 in_left &gt; in_right ，子树中序遍历为空，说明已经越过叶子节点，此时返回 $null$。</li>
+<li>递推工作：<ul>
+<li>建立根节点root： 值为前序遍历中索引为pre_root的节点值。</li>
+<li>搜索根节点root在中序遍历的索引i： 为了提升搜索效率，本题解使用哈希表 dic 预存储中序遍历的值与索引的映射关系，每次搜索的时间复杂度为 $O(1)$。</li>
+<li>构建根节点root的左子树和右子树： 通过调用 recur() 方法开启下一层递归。<br>  左子树： 根节点索引为 pre_root + 1 ，中序遍历的左右边界分别为 in_left 和 i - 1。<br>  右子树： 根节点索引为 i - in_left + pre_root + 1（即：根节点索引 + 左子树长度 + 1），中序遍历的左右边界分别为 i + 1 和 in_right。</li>
+</ul>
+</li>
+<li>返回值： 返回 root，含义是当前递归层级建立的根节点 root 为上一递归层级的根节点的左或右子节点。</li>
+</ul>
+<p><strong>解法注意点</strong></p>
+<ul>
+<li>根据题目描述输入的前序遍历和中序遍历的结果中都不含重复的数字，其表明树中每个节点值都是唯一的。</li>
+</ul>
+<blockquote>
+<p><strong>前序遍历特点</strong>： 节点按照 [ 根节点 | 左子树 | 右子树 ] 排序，<br><strong>中序遍历特点</strong>： 节点按照 [ 左子树 | 根节点 | 右子树 ] 排序，<br><strong>后序遍历特点</strong>： 节点按照 [ 左子树 | 右子树 | 根节点 ] 排序，</p>
+</blockquote>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -784,7 +901,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://trayfour34.github.io/posts/16107.html">https://trayfour34.github.io/posts/16107.html</a>
+                    <a href="https://trayfour34.github.io/posts/40218.html">https://trayfour34.github.io/posts/40218.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -822,8 +939,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
+                                <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
+                                    <span class="chip bg-color">二叉树</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%80%92%E5%BD%92/">
+                                    <span class="chip bg-color">递归</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%A0%86%E6%A0%88/">
+                                    <span class="chip bg-color">堆栈</span>
                                 </a>
                             
                         </div>
@@ -1252,89 +1377,40 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/20976.html">
+                <a href="/posts/40218.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="dmca.gripe:永久托管你的小文件">
+                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="算法4.前序中序重建二叉树">
                         
-                        <span class="card-title">dmca.gripe:永久托管你的小文件</span>
+                        <span class="card-title">算法4.前序中序重建二叉树</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            引言此篇是我严格意义上的第一篇博文。选择这个主题也是因为在后续优化博客的过程中碰到了相应的问题。故借此机会写下来分享分享。
-因为自己想要在博客中增添音乐和视频板块，在搭建博客的时候参考别人的博客，发现大部分人都是去通过找寻免费的音频网站，获
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-24
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%8F%91%E7%8E%B0/" class="post-category">
-                                    发现
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/gripe/">
-                        <span class="chip bg-color">gripe</span>
-                    </a>
-                    
-                    <a href="/tags/blog/">
-                        <span class="chip bg-color">blog</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/16107.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Welcome to Hexo! This is my very first post. Check documentation for more info. If you get any problems when using Hexo,
+                            题目描述输入某二叉树的前序遍历和中序遍历的结果，请重建该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。
+示例 1：
+给出
+前序遍历 preorder = [3,9,20,15,7]
+中序遍历 inorder = [9,3,1
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-20
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    随笔
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
@@ -1345,8 +1421,79 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
+                        <span class="chip bg-color">二叉树</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%80%92%E5%BD%92/">
+                        <span class="chip bg-color">递归</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%A0%86%E6%A0%88/">
+                        <span class="chip bg-color">堆栈</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/27192.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="算法3.链表反转">
+                        
+                        <span class="card-title">算法3.链表反转</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            题目描述输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。
+示例 1：
+输入：head = [1,3,2]
+输出：[2,3,1]
+
+解题思路方法一：链表拼接
+时间复杂度：$O(N)$
+空间复杂度：$O(1)$
+
+代码如下
+
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%93%BE%E8%A1%A8/">
+                        <span class="chip bg-color">链表</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%80%92%E5%BD%92/">
+                        <span class="chip bg-color">递归</span>
                     </a>
                     
                 </div>
@@ -1484,6 +1631,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
     <footer class="page-footer bg-color">

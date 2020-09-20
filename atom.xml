@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://trayfour34.github.io/"/>
-  <updated>2020-09-20T06:51:05.726Z</updated>
+  <updated>2020-09-20T09:06:45.084Z</updated>
   <id>https://trayfour34.github.io/</id>
   
   <author>
@@ -15,6 +15,67 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法4.前序中序重建二叉树</title>
+    <link href="https://trayfour34.github.io/posts/40218.html"/>
+    <id>https://trayfour34.github.io/posts/40218.html</id>
+    <published>2020-09-20T09:06:04.381Z</published>
+    <updated>2020-09-20T09:06:45.084Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="https://trayfour34.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="二叉树" scheme="https://trayfour34.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    
+      <category term="递归" scheme="https://trayfour34.github.io/tags/%E9%80%92%E5%BD%92/"/>
+    
+      <category term="堆栈" scheme="https://trayfour34.github.io/tags/%E5%A0%86%E6%A0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>算法3.链表反转</title>
+    <link href="https://trayfour34.github.io/posts/27192.html"/>
+    <id>https://trayfour34.github.io/posts/27192.html</id>
+    <published>2020-09-20T08:40:29.542Z</published>
+    <updated>2020-09-20T08:44:34.821Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h4&gt;&lt;p&gt;输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例
+        
+      
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="https://trayfour34.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="链表" scheme="https://trayfour34.github.io/tags/%E9%93%BE%E8%A1%A8/"/>
+    
+      <category term="递归" scheme="https://trayfour34.github.io/tags/%E9%80%92%E5%BD%92/"/>
+    
+  </entry>
   
   <entry>
     <title>算法2.二维数组中的查找</title>
