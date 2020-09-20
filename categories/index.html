@@ -649,10 +649,19 @@
                 </a>
                 
                 
-                <a href="/tags/%E7%AE%97%E6%B3%95/" title="算法: 1">
+                <a href="/tags/%E7%AE%97%E6%B3%95/" title="算法: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             data-tagname="算法" style="background-color: #D7BDE2;">算法
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" title="二叉树: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="二叉树" style="background-color: #A3E4D7;">二叉树
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -694,11 +703,11 @@
                 </a>
                 
                 
-                <a href="/categories/%E7%AE%97%E6%B3%95/" title="算法: 1">
+                <a href="/categories/%E7%AE%97%E6%B3%95/" title="算法: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             style="background-color: #D5F5E3;">算法
-                        <span class="tag-length">1</span>
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -727,7 +736,7 @@
 <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"Ucloud","weight":1,"link":"https://trayfour34.github.io/tags/Ucloud/"},{"text":"picgo","weight":1,"link":"https://trayfour34.github.io/tags/picgo/"},{"text":"七牛","weight":1,"link":"https://trayfour34.github.io/tags/七牛/"},{"text":"gripe","weight":1,"link":"https://trayfour34.github.io/tags/gripe/"},{"text":"blog","weight":1,"link":"https://trayfour34.github.io/tags/blog/"},{"text":"流水账","weight":1,"link":"https://trayfour34.github.io/tags/流水账/"},{"text":"hexo","weight":1,"link":"https://trayfour34.github.io/tags/hexo/"},{"text":"算法","weight":1,"link":"https://trayfour34.github.io/tags/算法/"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"Ucloud","weight":1,"link":"https://trayfour34.github.io/tags/Ucloud/"},{"text":"picgo","weight":1,"link":"https://trayfour34.github.io/tags/picgo/"},{"text":"七牛","weight":1,"link":"https://trayfour34.github.io/tags/七牛/"},{"text":"gripe","weight":1,"link":"https://trayfour34.github.io/tags/gripe/"},{"text":"blog","weight":1,"link":"https://trayfour34.github.io/tags/blog/"},{"text":"流水账","weight":1,"link":"https://trayfour34.github.io/tags/流水账/"},{"text":"hexo","weight":1,"link":"https://trayfour34.github.io/tags/hexo/"},{"text":"算法","weight":2,"link":"https://trayfour34.github.io/tags/算法/"},{"text":"二叉树","weight":1,"link":"https://trayfour34.github.io/tags/二叉树/"}], {
         autoResize: true
     });
 </script>
@@ -769,7 +778,7 @@
                     color: '#3C4858'
                 }
             },
-            indicator: [{"name":"发现","max":3},{"name":"随笔","max":3},{"name":"算法","max":3}],
+            indicator: [{"name":"发现","max":4},{"name":"随笔","max":4},{"name":"算法","max":4}],
             nameGap: 5,
             center: ['50%','55%'],
             radius: '66%'
@@ -780,7 +789,7 @@
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data : [
                 {
-                    value : [2,2,1],
+                    value : [2,2,2],
                     name : '文章分类数量'
                 }
             ]
@@ -850,7 +859,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,3,0,0,0,1,0,0,1],
+                data: [0,0,0,0,0,3,0,0,0,1,0,0,2],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -892,7 +901,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"发现","value":2},{"name":"随笔","value":2},{"name":"算法","value":1}],
+                data: [{"name":"发现","value":2},{"name":"随笔","value":2},{"name":"算法","value":2}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -916,7 +925,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Ucloud","picgo","七牛","gripe","blog","流水账","hexo","算法"]
+                data: ["算法","Ucloud","picgo","七牛","gripe","blog","流水账","hexo","二叉树"]
             }
         ],
         yAxis: [
@@ -929,7 +938,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [1,1,1,1,1,1,1,1],
+                data: [2,1,1,1,1,1,1,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -971,7 +980,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4.2k</span>&nbsp;字
+                class="white-color">5k</span>&nbsp;字
             
             
             
