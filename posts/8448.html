@@ -5,8 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="虚拟机集群分布的两三坑..., ">
-    <meta name="description" content="​        
-​        配环境永远是世界性难题之一。最近开始踩大数据的坑，为了实现HDFS完全集群分布实验，我克隆了三台虚拟机作为我的实验对象。在经历了连接校园网虚拟机分不到内网IP的漫长难题之后，本以为终于可以顺顺利利实验，">
+    <meta name="description" content="​        配环境永远是世界性难题之一。最近开始踩大数据的坑，为了实现HDFS完全集群分布实验，我克隆了三台虚拟机作为我的实验对象。在经历了连接校园网虚拟机分不到内网IP的漫长难题之后，本以为终于可以顺顺利利实验，结果还是遇到了不少b">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -729,8 +728,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>​        </p>
-<p>​        配环境永远是世界性难题之一。最近开始踩大数据的坑，为了实现HDFS完全集群分布实验，我克隆了三台虚拟机作为我的实验对象。在经历了连接校园网虚拟机分不到内网IP的漫长难题之后，本以为终于可以顺顺利利实验，结果还是遇到了不少<code>bug</code> :sweat:</p>
+                <p>​        配环境永远是世界性难题之一。最近开始踩大数据的坑，为了实现HDFS完全集群分布实验，我克隆了三台虚拟机作为我的实验对象。在经历了连接校园网虚拟机分不到内网IP的漫长难题之后，本以为终于可以顺顺利利实验，结果还是遇到了不少<code>bug</code> :sweat:</p>
 <h4 id="错误一"><a href="#错误一" class="headerlink" title="错误一"></a>错误一</h4><p>​        第一个坑是在初始格式化<code>namenode</code>的时候，<code>hdfs namenode format</code>命令报域名解析暂时失败，报错<code>log</code>如下图所示。看了一遍林子雨老师的部署教程也没有相关的经历和解决办法。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/trayfour34/Picture_Bed@master/20201107104818.png" alt="错误日志"></p>
 <p>​        因为报错之时忘了截图，所以我找了别人发生的类似错误图示来说明问题。错误日志上写的是<code>Master.localdomain</code>域名解析暂时失败。但我主机名都是以$Master$标注的，怎么会出现<code>localdomain</code>的后缀呢？查了一下<code>/etc/hosts</code>主机映射文件</p>
@@ -1290,8 +1288,7 @@ firewall-cmd --state #查看默认防火墙状态（关闭后显示notrunning，
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ​        
-​        配环境永远是世界性难题之一。最近开始踩大数据的坑，为了实现HDFS完全集群分布实验，我克隆了三台虚拟机作为我的实验对象。在经历了连接校园网虚拟机分不到内网IP的漫长难题之后，本以为终于可以顺顺利利实验，
+                            ​        配环境永远是世界性难题之一。最近开始踩大数据的坑，为了实现HDFS完全集群分布实验，我克隆了三台虚拟机作为我的实验对象。在经历了连接校园网虚拟机分不到内网IP的漫长难题之后，本以为终于可以顺顺利利实验，结果还是遇到了不少b
                         
                     </div>
                     <div class="publish-info">

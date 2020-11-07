@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://trayfour34.github.io/"/>
-  <updated>2020-11-07T14:22:02.236Z</updated>
+  <updated>2020-11-07T14:45:17.910Z</updated>
   <id>https://trayfour34.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://trayfour34.github.io/posts/8448.html"/>
     <id>https://trayfour34.github.io/posts/8448.html</id>
     <published>2020-11-03T07:12:30.000Z</published>
-    <updated>2020-11-07T14:22:02.236Z</updated>
+    <updated>2020-11-07T14:45:17.910Z</updated>
     
     <summary type="html">
     
@@ -29,8 +29,7 @@
       
         
         
-          &lt;p&gt;​        &lt;/p&gt;
-&lt;p&gt;​       
+          &lt;p&gt;​        配环境永远是世界性难题之一。最近开始踩大数据的坑，为了实现HDFS完全集群分布实验，我克隆了三台虚拟机作为我的实验对象。在经历了连接校园网虚拟机分不到内网IP的漫长难题之后，本以为终于可以顺顺利利实验，结果还是遇到了不少&lt;code&gt;bug&lt;/code&gt;
         
       
     
