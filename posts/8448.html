@@ -703,14 +703,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-11-07
+                    2020-11-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.3k
                 </div>
                 
 
@@ -746,6 +746,14 @@
 <p>根据网上定义，<code>ssh</code>对这种情况也有相应的解决办法，即另外配置一个<code>config</code>，映射好<code>Hostname</code>和<code>username</code>，我的配置如下图所示：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/trayfour34/Picture_Bed@master/20201107104841.png" alt="image-20201103205814640"></p>
 <p>这样的话，当下次使用<code>ssh Slave1</code>的时候，$Master$本机会首先根据<code>config</code>中的配置需要对应的<code>User</code>，再请求连接，这样的话就能顺利解决不同用户名下的<code>ssh</code>远程连接任务了！</p>
+<h4 id="错误三"><a href="#错误三" class="headerlink" title="错误三"></a>错误三</h4><p>​        第三个坑是配置完毕之后，$ssh$免密登录仍旧需要密码的问题。</p>
+<p>​        在解决了上述问题之后，$ssh$远程连接另一台服务器仍旧需要密码，我第一反应是可能依旧连接不上，但是<code>ping</code>了一下远程主机之后发现可以<code>ping</code>的通，这就说明连接没有问题，应该是目的主机设置的问题。那会是什么问题呢？初步断定可能是防火墙的锅，遂用<code>sudo cat /var/log/secure</code>检查了系统安全日志，如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/trayfour34/Picture_Bed@master/20201107235650.png" alt="系统安全日志"></p>
+<p>​        网上查了查，原来是某些文件的权限配置不当，导致信任错误，$SSH$不希望<strong>home</strong>目录和<strong>~/.ssh</strong>目录对组有写权限，于是：对于用户主目录，用命令<code>chmod g-w /home/hadoop</code>修改权限；除此之外，对 <strong>.ssh</strong> 文件夹和 <strong>authorized_keys</strong> 文件同样也要限制，分别用以下两个命令：</p>
+<blockquote>
+<p>chmod 700 /home/hadoop/.ssh<br>chmod 600 /home/hadoop/.ssh/authorized_keys</p>
+</blockquote>
+<p>​        最后，用 <code>service sshd restart</code> 命令重启了$SSH$服务。</p>
 <h4 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h4><p>最后，大家着手集群分布之前，为了避免不必要的麻烦和花费过多的时间，切记事先关掉防火墙！！！别问我怎么知道的。:smile:</p>
 <p>附上$centos$关于防火墙命令的操作</p>
 <pre class="line-numbers language-linux"><code class="language-linux">systemctl stop firewalld.service #停止firewall
@@ -1537,7 +1545,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">14.8k</span>&nbsp;字
+                class="white-color">15.1k</span>&nbsp;字
             
             
             
